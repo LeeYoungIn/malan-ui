@@ -1,3 +1,7 @@
 {
-  "title": "UI KR"
+  "title": "UI KR",
+  "Error": {
+    "title": "Something went wrong!",
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+  }
 }
