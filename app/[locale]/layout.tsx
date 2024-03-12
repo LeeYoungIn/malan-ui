@@ -5,6 +5,8 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 
 import { Link, locales } from '@/navigation'
+import Header from '@ui/organisms/header'
+import { ThemeContextProvider } from '@ui/organisms/themeLayout'
 
 type Props = PropsWithChildren & { params: { locale: string } }
 
@@ -23,29 +25,32 @@ export async function generateMetadata({ params: { locale } }: Props) {
 
 export default function RootLayout({ children, params: { locale } }: Props) {
   unstable_setRequestLocale(locale)
-  return <html lang={locale} className={`bg-stone-50 text-black dark:bg-stone-950 dark:text-white ${GeistSans.variable} ${GeistMono.variable}`}>
-  <body className="max-w-5xl mx-auto">
-  <header className="grid grid-cols-[max-content,1fr,max-content] items-center p-4 *:p-4">
-    <div>MALAN</div>
-    <div>Header</div>
-    <div>Etc</div>
-  </header>
-  <main className="grid grid-cols-[max-content,1fr]">
-    <nav className="max-w-xs">
-      <p>Theme</p>
-      <ul>
-        <li><Link href="https://tailwindcss.com/docs/customizing-colors" target="_blank">Colors</Link></li>
-      </ul>
-      <p>Components</p>
-      <ul>
-        <li><Link href="/component/button">Button</Link></li>
-      </ul>
-    </nav>
-    <div>
-      {children}
-    </div>
-  </main>
-  <footer>Footer</footer>
-  </body>
-  </html>
+  return <ThemeContextProvider>
+    <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <body className="w-full h-full bg-stone-50 text-black dark:bg-stone-950 dark:text-white">
+    <header className="max-w-5xl mx-auto grid grid-cols-[max-content,1fr,max-content] items-center p-4 *:p-4">
+      <Header/>
+      <div>MALAN</div>
+      <div>Header</div>
+      <div>Etc</div>
+    </header>
+    <main className="max-w-5xl mx-auto grid grid-cols-[max-content,1fr]">
+      <nav className="max-w-xs">
+        <p>Theme</p>
+        <ul>
+          <li><Link href="https://tailwindcss.com/docs/customizing-colors" target="_blank">Colors</Link></li>
+        </ul>
+        <p>Components</p>
+        <ul>
+          <li><Link href="/component/button">Button</Link></li>
+        </ul>
+      </nav>
+      <div>
+        {children}
+      </div>
+    </main>
+    <footer className="max-w-5xl mx-auto">Footer</footer>
+    </body>
+    </html>
+  </ThemeContextProvider>
 }
