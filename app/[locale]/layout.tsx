@@ -6,7 +6,7 @@ import { GeistMono } from 'geist/font/mono'
 
 import { Link, locales } from '@/navigation'
 
-import './globals.css'
+import '@ui/styles/globals.css'
 
 type Props = PropsWithChildren & { params: { locale: string } }
 
