@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { PropsWithChildren } from 'react'
 
-const inter = Inter({ subsets: ["latin"] });
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
+
+import { Link } from '@/navigation'
+
+import './globals.css'
 
 export const metadata: Metadata = {
   title: "Create Next App",
