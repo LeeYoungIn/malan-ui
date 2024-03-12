@@ -19,6 +19,7 @@
     "publish": "rm -rf dist && mkdir dist && babel app/ui/components -d dist --copy-files"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "geist": "^1.2.2",
     "lodash": "^4.17.21",
     "next": "14.1.3",

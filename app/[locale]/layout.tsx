@@ -38,7 +38,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
       </ul>
       <p>Components</p>
       <ul>
-        <li><Link href="/button">Button</Link></li>
+        <li><Link href="/component/button">Button</Link></li>
       </ul>
     </nav>
     <div>
