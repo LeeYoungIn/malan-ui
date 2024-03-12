@@ -5,5 +5,5 @@ import { locales } from '@/navigation'
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound()
-  return { messages: (await import(`../messages/${locale}.json`)).default }
+  return { messages: (await import(`./messages/${locale}.json`)).default }
 })
