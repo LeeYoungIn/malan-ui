@@ -34,7 +34,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
     <nav className="max-w-xs">
       <p>Theme</p>
       <ul>
-        <li><Link href="/colors">Colors</Link></li>
+        <li><Link href="https://tailwindcss.com/docs/customizing-colors" target="_blank">Colors</Link></li>
       </ul>
       <p>Components</p>
       <ul>
