@@ -6,8 +6,6 @@ import { GeistMono } from 'geist/font/mono'
 
 import { Link, locales } from '@/navigation'
 
-import '@ui/styles/globals.css'
-
 type Props = PropsWithChildren & { params: { locale: string } }
 
 export function generateStaticParams() {
@@ -15,7 +13,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { locale } }: Props) {
-  const t = await getTranslations({ locale, namespace: 'LocaleLayout' })
+  const t = await getTranslations({ locale })
 
   return {
     title: t('title'),
