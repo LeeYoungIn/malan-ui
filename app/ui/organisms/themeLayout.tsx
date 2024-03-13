@@ -43,9 +43,9 @@ export function ThemeContextProvider(props: PropsWithChildren) {
     localStorage.setItem('isDarkTheme', `${!isDarkTheme}`)
   }
 
-  return <MyThemeContext.Provider value={{ isDarkTheme: true, toggleThemeHandler }}>
+  return <ThemeContext.Provider value={{ isDarkTheme: true, toggleThemeHandler }}>
     {props.children}
-  </MyThemeContext.Provider>
+  </ThemeContext.Provider>
 }
 
 export default ThemeContext
