@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body > * {
+  @apply max-w-5xl mx-auto;
+}
+
 @layer components {
   .components-list {
     @apply flex flex-wrap items-center gap-4;

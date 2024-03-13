@@ -1,5 +1,7 @@
 'use client'
 import { useContext } from 'react'
+
+import { Button } from '@ui/components'
 import MyThemeContext from './themeLayout'
 
 export default function Header() {
@@ -9,10 +11,15 @@ export default function Header() {
     themeCtx.toggleThemeHandler()
   }
 
-  return <button
-    type="button"
-    className="py-1 sm:py-2.5 px-2 sm:px-5 mr-2 bg-zinc-800 text-white dark:bg-zinc-200 dark:text-black rounded"
-    onClick={toggleThemeHandler}>
-    Toggle Theme
-  </button>
+  return <header className="grid grid-cols-[max-content,1fr,max-content] items-center p-4 *:p-4">
+    <Button
+      size="lg"
+      className="bg-stone-800 text-white dark:bg-stone-200 dark:text-black"
+      onClick={toggleThemeHandler}>
+      Toggle Theme
+    </Button>
+    <div>MALAN</div>
+    <div>Header</div>
+    <div>Etc</div>
+  </header>
 }

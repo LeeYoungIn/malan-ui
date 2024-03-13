@@ -28,13 +28,8 @@ export default function RootLayout({ children, params: { locale } }: Props) {
   return <ThemeContextProvider>
     <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
     <body className="w-full h-full bg-stone-50 text-black dark:bg-stone-950 dark:text-white">
-    <header className="max-w-5xl mx-auto grid grid-cols-[max-content,1fr,max-content] items-center p-4 *:p-4">
-      <Header/>
-      <div>MALAN</div>
-      <div>Header</div>
-      <div>Etc</div>
-    </header>
-    <main className="max-w-5xl mx-auto grid grid-cols-[max-content,1fr]">
+    <Header/>
+    <main className="grid grid-cols-[max-content,1fr]">
       <nav className="max-w-xs">
         <p>Theme</p>
         <ul>
@@ -49,7 +44,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
         {children}
       </div>
     </main>
-    <footer className="max-w-5xl mx-auto">Footer</footer>
+    <footer>Footer</footer>
     </body>
     </html>
   </ThemeContextProvider>
