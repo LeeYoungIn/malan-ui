@@ -4,16 +4,16 @@
 
 @layer components {
   .btn {
-    @apply px-4 py-3 rounded-xl text-black;
+    @apply rounded-xl text-black;
   }
 
   .btn-group {
-    @apply flex border border-neutral-200 dark:border-neutral-800 divide-x divide-neutral-200 dark:divide-neutral-800 rounded-xl;
+    @apply flex border border-stone-200 dark:border-stone-800 divide-x divide-stone-200 dark:divide-stone-800 rounded-xl;
   }
 
   .btn-group > div {
     @apply text-black dark:text-white [&>.btn]:text-black [&>.btn]:dark:text-white [&>.btn]:rounded-none;
-    @apply [&>.btn]:hover:bg-neutral-200 [&>.btn]:dark:hover:bg-neutral-800;
+    @apply [&>.btn]:hover:bg-stone-200 [&>.btn]:dark:hover:bg-stone-800;
     @apply first:rounded-l-xl last:rounded-r-xl [&:first-child>.btn]:rounded-l-xl [&:last-child>.btn]:rounded-r-xl;
   }
 }
