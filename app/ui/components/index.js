@@ -1,5 +1,5 @@
 import Button from './button'
 
-import '@ui/styles/components.css'
+// import '@ui/styles/components.css'
 
 export { Button }

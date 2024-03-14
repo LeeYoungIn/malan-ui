@@ -11,6 +11,14 @@ body {
 }
 
 @layer components {
+  .btn {
+    @apply px-4 py-3 rounded-xl text-black;
+    @apply bg-neutral-200 dark:bg-white hover:bg-neutral-300 dark:disabled:bg-neutral-400;
+    @apply [&.btn-size-sm]:px-3 [&.btn-size-sm]:py-2.5 [&.btn-size-sm]:text-sm;
+    @apply [&.btn-size-lg]:px-5 [&.btn-size-lg]:py-3 [&.btn-size-lg]:text-lg;
+    @apply [&.btn-clean]:bg-transparent [&.btn-clean]:hover:bg-transparent [&.btn-clean]:disabled:bg-transparent;
+  }
+
   .components-list {
     @apply flex flex-wrap items-center gap-4;
   }
