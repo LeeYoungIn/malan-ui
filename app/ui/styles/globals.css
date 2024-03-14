@@ -34,5 +34,6 @@ body {
   main > nav > ul a {
     @apply block w-full my-px px-4 py-2.5 font-light rounded-lg;
     @apply hover:bg-stone-100 dark:hover:bg-stone-900 text-stone-900 dark:text-stone-300;
+    @apply [&.active]:bg-stone-200/50 [&.active]:dark:bg-stone-800;
   }
 }

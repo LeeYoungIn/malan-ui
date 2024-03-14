@@ -1,8 +1,9 @@
 'use client'
-import { createContext, PropsWithChildren, useCallback, useContext, useState } from 'react'
+import map from 'lodash/map'
+import { createContext, PropsWithChildren, useCallback, useContext, useMemo, useState } from 'react'
 import clsx from 'clsx'
 
-import { Link } from '@/navigation'
+import { Link, usePathname } from '@/navigation'
 
 export const NavContext = createContext({ isOpen: false, toggleNavHandler: () => {} })
 export const useNav = () => useContext(NavContext)
@@ -10,6 +11,13 @@ export const useNav = () => useContext(NavContext)
 export default function () {
   const navCtx: { isOpen?: boolean; toggleNavHandler: (v?: boolean) => void } = useContext(NavContext)
   const { isOpen } = useNav()
+
+  const pathname = usePathname()
+  const menu = useMemo(() => map([
+    { url: '/component/badge', label: 'Badge' },
+    { url: '/component/button', label: 'Button' },
+    { url: '/component/input', label: 'Input' }
+  ], item => ({ ...item, active: pathname === item.url })), [pathname])
 
   const toggleNavHandler = useCallback(() => {
     navCtx.toggleNavHandler(false)
@@ -27,9 +35,9 @@ export default function () {
       </ul>
       <p>Components</p>
       <ul>
-        <li><Link href="/component/badge">Badge</Link></li>
-        <li><Link href="/component/button">Button</Link></li>
-        <li><Link href="/component/input">Input</Link></li>
+        {map(menu, item => <li key={item.url}>
+          <Link href={item.url} className={clsx({ active: item.active })}>{item.label}</Link>
+        </li>)}
       </ul>
     </nav>
   </>
