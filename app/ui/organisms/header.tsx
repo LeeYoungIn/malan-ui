@@ -2,12 +2,13 @@
 import { useCallback, useContext } from 'react'
 
 import { Button, ButtonGroup } from '@ui/components'
-import MyThemeContext from './themeLayout'
+import ThemeContext, { useTheme } from './themeLayout'
 import { NavContext } from './navbar'
 
 export default function Header() {
-  const themeCtx = useContext(MyThemeContext)
+  const themeCtx = useContext(ThemeContext)
   const navCtx = useContext(NavContext)
+  const { isDarkTheme } = useTheme()
 
   const toggleThemeHandler = useCallback((theme: 'light' | 'dark') => {
     themeCtx.toggleThemeHandler(theme)
@@ -26,10 +27,20 @@ export default function Header() {
       <div>MALAN</div>
       <div>
         <ButtonGroup>
-          <ButtonGroup.Item onClick={() => toggleThemeHandler('light')}><i className="ki-outline ki-night-day"></i></ButtonGroup.Item>
-          <ButtonGroup.Item onClick={() => toggleThemeHandler('dark')}><i className="ki-outline ki-moon"></i></ButtonGroup.Item>
+          <ButtonGroup.Item
+            className={clsx(!isDarkTheme && THEME_ACTIVE)}
+            onClick={() => toggleThemeHandler('light')}>
+            <i className="ki-outline ki-night-day"></i>
+          </ButtonGroup.Item>
+          <ButtonGroup.Item
+            className={clsx(isDarkTheme && THEME_ACTIVE)}
+            onClick={() => toggleThemeHandler('dark')}>
+            <i className="ki-outline ki-moon"></i>
+          </ButtonGroup.Item>
         </ButtonGroup>
       </div>
     </div>
   </header>
 }
+
+const THEME_ACTIVE = 'bg-stone-100 dark:bg-stone-900'

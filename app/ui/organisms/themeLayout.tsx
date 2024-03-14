@@ -1,10 +1,11 @@
 'use client'
-import { createContext, PropsWithChildren, useEffect, useState } from 'react'
+import { createContext, PropsWithChildren, useContext, useEffect, useState } from 'react'
 
 const ThemeContext = createContext<{ isDarkTheme: boolean, toggleThemeHandler: (theme?: 'light' | 'dark') => void }>({
   isDarkTheme: true,
   toggleThemeHandler: (_theme?: 'light' | 'dark') => {}
 })
+export const useTheme = () => useContext(ThemeContext)
 
 export function ThemeContextProvider(props: PropsWithChildren) {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
@@ -48,7 +49,7 @@ export function ThemeContextProvider(props: PropsWithChildren) {
     localStorage.setItem('isDarkTheme', `${!isDarkTheme}`)
   }
 
-  return <ThemeContext.Provider value={{ isDarkTheme: true, toggleThemeHandler }}>
+  return <ThemeContext.Provider value={{ isDarkTheme, toggleThemeHandler }}>
     {props.children}
   </ThemeContext.Provider>
 }
