@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body > * {
-  @apply max-w-5xl mx-auto;
-}
-
 @layer components {
   .components-list {
     @apply flex flex-wrap items-center gap-4;
@@ -16,5 +12,12 @@ body > * {
     @apply bg-neutral-200 dark:bg-white hover:bg-neutral-300 dark:disabled:bg-neutral-400 text-black;
     @apply [&.btn-size-sm]:px-3 [&.btn-size-sm]:py-2.5 [&.btn-size-sm]:text-sm;
     @apply [&.btn-size-lg]:px-5 [&.btn-size-lg]:py-3 [&.btn-size-lg]:text-lg;
+  }
+
+  /*
+   * Page
+   */
+  main > nav > ul a {
+    @apply block w-full my-px px-4 py-2.5 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-900;
   }
 }

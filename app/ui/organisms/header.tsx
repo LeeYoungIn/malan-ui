@@ -11,15 +11,15 @@ export default function Header() {
     themeCtx.toggleThemeHandler()
   }
 
-  return <header className="grid grid-cols-[max-content,1fr,max-content] items-center p-4 *:p-4">
-    <Button
-      size="lg"
-      className="bg-stone-800 text-white dark:bg-stone-200 dark:text-black"
-      onClick={toggleThemeHandler}>
-      Toggle Theme
-    </Button>
-    <div>MALAN</div>
-    <div>Header</div>
-    <div>Etc</div>
+  return <header className="mb-8 py-2 border-b-[1px] border-stone-200 dark:border-stone-800">
+    <div className="container grid grid-cols-[max-content,1fr,max-content] items-center">
+      <Button
+        className="bg-stone-800 text-white dark:bg-stone-200 dark:text-black"
+        onClick={toggleThemeHandler}>
+        Toggle Theme
+      </Button>
+      <div>MALAN</div>
+      <div>Header</div>
+    </div>
   </header>
 }

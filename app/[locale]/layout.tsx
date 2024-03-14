@@ -5,6 +5,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 
 import { Link, locales } from '@/navigation'
+import Footer from '@ui/organisms/footer'
 import Header from '@ui/organisms/header'
 import { ThemeContextProvider } from '@ui/organisms/themeLayout'
 
@@ -29,8 +30,8 @@ export default function RootLayout({ children, params: { locale } }: Props) {
     <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
     <body className="w-full h-full bg-stone-50 text-black dark:bg-stone-950 dark:text-white">
     <Header/>
-    <main className="grid grid-cols-[max-content,1fr]">
-      <nav className="max-w-xs">
+    <main className="container grid grid-cols-[max-content,1fr] divide-x-[1px] divide-stone-200 dark:divide-stone-800">
+      <nav className="w-60 [&_ul]:mx-4 [&_ul]:mb-4 [&_p]:px-4 [&_p]:py-2.5 [&_p]:font-medium">
         <p>Theme</p>
         <ul>
           <li><Link href="https://tailwindcss.com/docs/customizing-colors" target="_blank">Colors</Link></li>
@@ -44,7 +45,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
         {children}
       </div>
     </main>
-    <footer>Footer</footer>
+    <Footer/>
     </body>
     </html>
   </ThemeContextProvider>
