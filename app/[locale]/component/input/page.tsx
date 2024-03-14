@@ -1,4 +1,4 @@
-import { Input, InputGroup, Textarea } from '@ui/components'
+import { Input, InputGroup, InputRow, Textarea } from '@ui/components'
 
 export default function () {
   return <>
@@ -8,6 +8,14 @@ export default function () {
         <Input placeholder="Placeholder..."/>
         <Input type="number" placeholder="Number..."/>
         <Input placeholder="Disable..." disabled/>
+      </div>
+    </section>
+
+    <section>
+      <h3>Input Rows</h3>
+      <div className="grid gap-3 mt-4">
+        <InputRow desc="Description" placeholder="Placeholder..."/>
+        <InputRow error="Required" placeholder="Error..."/>
       </div>
     </section>
 
