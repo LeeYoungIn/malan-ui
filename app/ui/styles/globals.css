@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  @apply w-full h-full min-h-screen m-0 p-0;
+}
+
+body {
+  @apply grid grid-rows-body;
+}
+
 @layer components {
   .components-list {
     @apply flex flex-wrap items-center gap-4;
@@ -17,6 +25,11 @@
   /*
    * Page
    */
+  main > nav {
+    @apply smTo:fixed smTo:top-0 smTo:left-0 smTo:bottom-0 smTo:shadow-2xl smTo:shadow-stone-200;
+    @apply smTo:-left-full  smTo:transition-[left] smTo:delay-0 smTo:duration-200;
+  }
+
   main > nav > ul a {
     @apply block w-full my-px px-4 py-2.5 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-900;
   }

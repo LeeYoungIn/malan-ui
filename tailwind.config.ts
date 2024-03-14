@@ -15,6 +15,16 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)']
+      },
+      gridTemplateRows: {
+        'body': 'max-content 1fr max-content',
+      },
+      screens: {
+        smTo: { max: '639px' },
+        mdTo: { max: '767px' },
+        lgTo: { max: '1023px' },
+        xlTo: { max: '1279px' },
+        '2xlTo': { max: '1535px' }
       }
     }
   },
