@@ -1,16 +1,16 @@
 'use client'
 import { useCallback, useContext } from 'react'
 
-import { Button } from '@ui/components'
+import { Button, ButtonGroup } from '@ui/components'
 import MyThemeContext from './themeLayout'
 import { NavContext } from './navbar'
 
 export default function Header() {
-  const themeCtx: { isDarkMode?: boolean; toggleThemeHandler: () => void } = useContext(MyThemeContext)
-  const navCtx: { isOpen?: boolean; toggleNavHandler: (v?: boolean) => void } = useContext(NavContext)
+  const themeCtx = useContext(MyThemeContext)
+  const navCtx = useContext(NavContext)
 
-  const toggleThemeHandler = useCallback(() => {
-    themeCtx.toggleThemeHandler()
+  const toggleThemeHandler = useCallback((theme: 'light' | 'dark') => {
+    themeCtx.toggleThemeHandler(theme)
   }, [themeCtx])
   const toggleNavHandler = useCallback(() => {
     navCtx.toggleNavHandler()
@@ -22,14 +22,14 @@ export default function Header() {
         <Button variant="clean" onClick={toggleNavHandler} className="smTo:block hidden">
           <i className="ki-outline ki-menu text-xl"></i>
         </Button>
-        <Button
-          className="bg-stone-800 text-white dark:bg-stone-200 dark:text-black"
-          onClick={toggleThemeHandler}>
-          Toggle Theme
-        </Button>
       </div>
       <div>MALAN</div>
-      <div>Header</div>
+      <div>
+        <ButtonGroup>
+          <Button onClick={() => toggleThemeHandler('light')}><i className="ki-outline ki-night-day"></i></Button>
+          <Button onClick={() => toggleThemeHandler('dark')}><i className="ki-outline ki-moon"></i></Button>
+        </ButtonGroup>
+      </div>
     </div>
   </header>
 }

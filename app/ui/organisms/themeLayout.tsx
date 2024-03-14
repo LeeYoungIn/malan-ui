@@ -1,9 +1,9 @@
 'use client'
 import { createContext, PropsWithChildren, useEffect, useState } from 'react'
 
-const ThemeContext = createContext({
+const ThemeContext = createContext<{ isDarkTheme: boolean, toggleThemeHandler: (theme?: 'light' | 'dark') => void }>({
   isDarkTheme: true,
-  toggleThemeHandler: () => {}
+  toggleThemeHandler: (_theme?: 'light' | 'dark') => {}
 })
 
 export function ThemeContextProvider(props: PropsWithChildren) {
@@ -28,9 +28,14 @@ export function ThemeContextProvider(props: PropsWithChildren) {
     }
   }
 
-  function toggleThemeHandler(): void {
-    const isDarkTheme: boolean = JSON.parse(localStorage.getItem('isDarkTheme')!)
-    setIsDarkTheme(!isDarkTheme)
+  function toggleThemeHandler(theme?: 'light' | 'dark'): void {
+    if (theme === 'dark') setIsDarkTheme(true)
+    else if (theme === 'light') setIsDarkTheme(false)
+    else {
+      const isDarkTheme: boolean = JSON.parse(localStorage.getItem('isDarkTheme')!)
+      setIsDarkTheme(!isDarkTheme)
+    }
+
     toggleDarkClassToBody()
     setValueToLocalStorage()
   }
