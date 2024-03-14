@@ -20,7 +20,8 @@ body {
    */
   main > nav {
     @apply smTo:fixed smTo:top-0 smTo:left-0 smTo:bottom-0 smTo:shadow-2xl smTo:shadow-stone-200;
-    @apply smTo:-left-full  smTo:transition-[left] smTo:delay-0 smTo:duration-200;
+    @apply smTo:-left-full smTo:transition-[left] smTo:delay-0 smTo:duration-200;
+    @apply sm:border-r-[1px] border-stone-200 dark:border-stone-800
   }
 
   main > nav > ul a {

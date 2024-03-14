@@ -31,7 +31,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
       <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="w-full h-full bg-stone-50 dark:bg-stone-950 text-black dark:text-white">
       <Header/>
-      <main className="container grid grid-cols-[max-content,1fr] divide-x-[1px] divide-stone-200 dark:divide-stone-800">
+      <main className="container grid grid-cols-[max-content,1fr]">
         <Navbar/>
         <div>
           {children}
