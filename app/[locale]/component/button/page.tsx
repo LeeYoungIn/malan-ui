@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from '@ui/components'
 export default function () {
   return <>
     <section>
-      <p>Size</p>
+      <h3>Size</h3>
       <div className="flex flex-wrap items-center gap-4">
         <Button size="sm">Small</Button>
         <Button>Default</Button>
@@ -12,7 +12,7 @@ export default function () {
     </section>
 
     <section>
-      <p>Color</p>
+      <h3>Color</h3>
       <div className="flex flex-wrap items-center gap-4">
         <Button>Default</Button>
         <Button className="bg-red-800 dark:bg-red-400 hover:bg-red-600 text-white">Red</Button>
@@ -20,7 +20,7 @@ export default function () {
     </section>
 
     <section>
-      <p>Icon</p>
+      <h3>Icon</h3>
       <div className="flex flex-wrap items-center gap-4">
         <Button withIcon><i className="ki-outline ki-menu"></i>Icon</Button>
         <Button onlyIcon><i className="ki-outline ki-menu"></i></Button>
@@ -28,7 +28,7 @@ export default function () {
     </section>
 
     <section>
-      <p>Group</p>
+      <h3>Group</h3>
       <div className="flex flex-wrap items-center gap-4">
         <ButtonGroup>
           <ButtonGroup.Item>Default</ButtonGroup.Item>

@@ -3,7 +3,7 @@ import { Badge } from '@ui/components'
 export default function () {
   return <>
     <section>
-      <p>Color</p>
+      <h3>Color</h3>
       <div className="flex flex-wrap items-center gap-4">
         <Badge>Default</Badge>
         <Badge className="bg-red-800 dark:bg-red-400 hover:bg-red-600 text-white">Red</Badge>
@@ -11,7 +11,7 @@ export default function () {
     </section>
 
     <section>
-      <p>Size</p>
+      <h3>Size</h3>
       <div className="flex flex-wrap items-center gap-4">
         <Badge size="sm">Small</Badge>
         <Badge>Default</Badge>
@@ -20,7 +20,7 @@ export default function () {
     </section>
 
     <section>
-      <p>Icon</p>
+      <h3>Icon</h3>
       <div className="flex flex-wrap items-center gap-4">
         <Badge withIcon><i className="ki-outline ki-menu"></i>Icon</Badge>
       </div>

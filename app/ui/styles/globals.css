@@ -11,6 +11,12 @@ body {
   font-size: 15px;
 }
 
+@layer base {
+  h3 {
+    @apply font-semibold text-2xl;
+  }
+}
+
 @layer components {
   .components-list {
     @apply flex flex-wrap items-center gap-4;
