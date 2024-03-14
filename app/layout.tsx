@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import { PropsWithChildren } from 'react'
 
+import '@ui/styles/keenicons/font/duotone/style.css'
+import '@ui/styles/keenicons/font/outline/style.css'
+import '@ui/styles/keenicons/font/solid/style.css'
 import '@ui/styles/globals.css'
 
 export const metadata: Metadata = {
