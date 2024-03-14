@@ -4,16 +4,18 @@ import clsx from 'clsx'
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'lg' | 'base'
   variant?: 'clean' | string
+  onlyIcon?: boolean
   withIcon?: boolean
 }
 
-export function Button({ type = 'button', size = 'base', variant, withIcon = false, className, ...props }: ButtonProps) {
+export function Button({ type = 'button', size = 'base', variant, onlyIcon = false, withIcon = false, className, ...props }: ButtonProps) {
   return <button
     type={type} {...props}
     className={clsx('btn',
       {
-        'px-4 py-3': !withIcon && size === 'base',
-        'px-3 py-2.5': withIcon || size === 'sm',
+        'p-3 flex items-center justify-center': onlyIcon,
+        'px-4 py-3': !onlyIcon && !withIcon && size === 'base',
+        'px-3 py-2.5': !onlyIcon && withIcon || size === 'sm',
         'px-5 py-3 text-lg': size === 'lg',
         'text-sm': size === 'sm',
         'flex items-center gap-2': withIcon,
@@ -22,9 +24,9 @@ export function Button({ type = 'button', size = 'base', variant, withIcon = fal
       className)}/>
 }
 
-export function ButtonGroup({ children, className }: Pick<ButtonProps, 'children' | 'className'>) {
+export function ButtonGroup({ onlyIcon, children, className }: Pick<ButtonProps, 'onlyIcon' | 'children' | 'className'>) {
   return <div className={clsx('btn-group', className)}>
-    {Children.map(children, child => <div>
+    {Children.map(children, child => <div className={clsx({ 'flex aspect-square': onlyIcon })}>
       {child}
     </div>)}
   </div>

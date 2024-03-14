@@ -18,6 +18,7 @@ export default function () {
     <p>Icon</p>
     <div className="flex flex-wrap items-center gap-4">
       <Button withIcon><i className="ki-outline ki-menu"></i>Icon</Button>
+      <Button onlyIcon><i className="ki-outline ki-menu"></i></Button>
     </div>
 
     <p>Group</p>

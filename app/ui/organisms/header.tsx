@@ -27,16 +27,18 @@ export default function Header() {
       </div>
       <div>MALAN</div>
       <div>
-        <ButtonGroup>
+        <ButtonGroup onlyIcon>
           <ButtonGroup.Item
+            onlyIcon
             className={clsx(!isDarkTheme && THEME_ACTIVE)}
             onClick={() => toggleThemeHandler('light')}>
-            <i className="ki-outline ki-night-day"></i>
+            <i className="ki-outline ki-night-day text-xl"></i>
           </ButtonGroup.Item>
           <ButtonGroup.Item
+            onlyIcon
             className={clsx(isDarkTheme && THEME_ACTIVE)}
             onClick={() => toggleThemeHandler('dark')}>
-            <i className="ki-outline ki-moon"></i>
+            <i className="ki-outline ki-moon text-xl"></i>
           </ButtonGroup.Item>
         </ButtonGroup>
       </div>
