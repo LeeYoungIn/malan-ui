@@ -19,9 +19,8 @@ export default function Header() {
   return <header className="mb-8 py-2 border-b-[1px] border-stone-200 dark:border-stone-800">
     <div className="container grid grid-cols-[max-content,1fr,max-content] items-center">
       <div className="flex">
-        <Button
-          onClick={toggleNavHandler}>
-          Toggle Nav
+        <Button variant="clean" onClick={toggleNavHandler} className="smTo:block hidden">
+          <i className="ki-outline ki-menu text-xl"></i>
         </Button>
         <Button
           className="bg-stone-800 text-white dark:bg-stone-200 dark:text-black"
