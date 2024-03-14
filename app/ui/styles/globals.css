@@ -8,6 +8,7 @@ html, body {
 
 body {
   @apply grid grid-rows-body;
+  font-size: 15px;
 }
 
 @layer components {
