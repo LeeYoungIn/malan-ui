@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-3 rounded-xl text-black;
+    @apply [&:not(.btn-clean)]:bg-neutral-200 [&:not(.btn-clean)]:dark:bg-white [&:not(.btn-clean)]:hover:bg-neutral-300 [&:not(.btn-clean)]:dark:disabled:bg-neutral-400;
+    @apply [&.btn-size-sm]:px-3 [&.btn-size-sm]:py-2.5 [&.btn-size-sm]:text-sm;
+    @apply [&.btn-size-lg]:px-5 [&.btn-size-lg]:py-3 [&.btn-size-lg]:text-lg;
+  }
+}
