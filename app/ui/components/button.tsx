@@ -4,16 +4,20 @@ import clsx from 'clsx'
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'lg' | 'base'
   variant?: 'clean' | string
+  withIcon?: boolean
 }
 
-export function Button({ type = 'button', size = 'base', variant, className, ...props }: ButtonProps) {
+export function Button({ type = 'button', size = 'base', variant, withIcon = false, className, ...props }: ButtonProps) {
   return <button
     type={type} {...props}
     className={clsx('btn',
       {
-        'bg-neutral-200 dark:bg-white hover:bg-neutral-300 dark:disabled:bg-neutral-400': variant !== 'clean',
-        'px-3 py-2.5 text-sm': size === 'sm',
-        'px-5 py-3 text-lg': size === 'lg'
+        'px-4 py-3': !withIcon && size === 'base',
+        'px-3 py-2.5': withIcon || size === 'sm',
+        'px-5 py-3 text-lg': size === 'lg',
+        'text-sm': size === 'sm',
+        'flex items-center gap-2': withIcon,
+        'bg-stone-200 dark:bg-white hover:bg-stone-300 dark:disabled:bg-stone-400': variant !== 'clean'
       },
       className)}/>
 }

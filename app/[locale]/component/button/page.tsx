@@ -15,6 +15,11 @@ export default function () {
       <Button className="bg-red-800 dark:bg-red-400 hover:bg-red-600 text-white">Red</Button>
     </div>
 
+    <p>Icon</p>
+    <div className="flex flex-wrap items-center gap-4">
+      <Button withIcon><i className="ki-outline ki-menu"></i>Icon</Button>
+    </div>
+
     <p>Group</p>
     <div className="flex flex-wrap items-center gap-4">
       <ButtonGroup>
