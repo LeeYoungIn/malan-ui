@@ -29,6 +29,7 @@ export default function () {
       <ul>
         <li><Link href="/component/badge">Badge</Link></li>
         <li><Link href="/component/button">Button</Link></li>
+        <li><Link href="/component/input">Input</Link></li>
       </ul>
     </nav>
   </>

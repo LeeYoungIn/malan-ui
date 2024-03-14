@@ -16,4 +16,24 @@
     @apply [&>.btn]:hover:bg-stone-200 [&>.btn]:dark:hover:bg-stone-800;
     @apply first:rounded-l-xl last:rounded-r-xl [&:first-child>.btn]:rounded-l-xl [&:last-child>.btn]:rounded-r-xl;
   }
+
+  input, textarea {
+    @apply w-full px-4 py-3 outline-0 rounded-xl shadow-none;
+    @apply border border-stone-200 dark:border-stone-800 placeholder-stone-400 bg-transparent;
+    @apply disabled:opacity-70;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .input-group {
+    @apply [&>input]:border-0 [&>input]:flex-1 [&>input]:w-auto [&>input]:rounded-none;
+    @apply [&>span]:px-4 [&>span]:py-3 [&>span]:bg-stone-200 [&>span]:dark:bg-stone-800;
+    @apply [&>span:first-child]:rounded-l-xl [&>span:last-child]:rounded-r-xl;
+    @apply flex items-stretch w-full rounded-xl;
+    @apply border border-stone-200 dark:border-stone-800;
+  }
 }
