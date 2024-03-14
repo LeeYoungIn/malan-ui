@@ -27,6 +27,7 @@ export default function () {
       </ul>
       <p>Components</p>
       <ul>
+        <li><Link href="/component/badge">Badge</Link></li>
         <li><Link href="/component/button">Button</Link></li>
       </ul>
     </nav>
