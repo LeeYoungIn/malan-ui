@@ -4,9 +4,9 @@ export default function () {
   return <div>
     <p>Size</p>
     <div className="flex flex-wrap items-center gap-4">
-      <Button size="sm">Size sm</Button>
+      <Button size="sm">Small</Button>
       <Button>Default</Button>
-      <Button size="lg">Size lg</Button>
+      <Button size="lg">Large</Button>
     </div>
 
     <p>Color</p>

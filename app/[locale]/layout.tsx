@@ -33,7 +33,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
       <Header/>
       <main className="container grid grid-cols-[max-content,1fr]">
         <Navbar/>
-        <div>
+        <div className="px-4 py-2.5">
           {children}
         </div>
       </main>
