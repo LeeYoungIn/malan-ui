@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, Children, HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react'
 import clsx from 'clsx'
 
 export interface BadgeProps extends HTMLAttributes<HTMLElement> {
@@ -10,7 +10,7 @@ export interface BadgeProps extends HTMLAttributes<HTMLElement> {
 export function Badge({ size = 'base', variant, withIcon = false, className, ...props }: BadgeProps) {
   return <div
     {...props}
-    className={clsx('badge font-light rounded-full',
+    className={clsx('badge font-light rounded-full text-black',
       {
         'px-3 py-1 text-sm': !withIcon && size === 'base',
         'px-2 py-0.5': withIcon || size === 'sm',
