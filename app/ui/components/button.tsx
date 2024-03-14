@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, Children } from 'react'
 import clsx from 'clsx'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -20,6 +20,12 @@ export function Button({ type = 'button', size = 'base', variant, className, ...
 
 export function ButtonGroup({ children, className }: Pick<ButtonProps, 'children' | 'className'>) {
   return <div className={clsx('btn-group', className)}>
-    {children}
+    {Children.map(children, child => <div>
+      {child}
+    </div>)}
   </div>
+}
+
+ButtonGroup.Item = ({ variant = 'clean', ...props }: ButtonProps) => {
+  return <Button variant={variant} {...props}/>
 }

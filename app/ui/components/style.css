@@ -9,6 +9,11 @@
 
   .btn-group {
     @apply flex border border-neutral-200 dark:border-neutral-800 divide-x divide-neutral-200 dark:divide-neutral-800 rounded-xl;
-    @apply [&>.btn]:bg-transparent [&>.btn]:text-white [&>.btn]:rounded-none;
+  }
+
+  .btn-group > div {
+    @apply text-black dark:text-white [&>.btn]:text-black [&>.btn]:dark:text-white [&>.btn]:rounded-none;
+    @apply [&>.btn]:hover:bg-neutral-200 [&>.btn]:dark:hover:bg-neutral-800;
+    @apply first:rounded-l-xl last:rounded-r-xl [&:first-child>.btn]:rounded-l-xl [&:last-child>.btn]:rounded-r-xl;
   }
 }

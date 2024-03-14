@@ -26,8 +26,8 @@ export default function Header() {
       <div>MALAN</div>
       <div>
         <ButtonGroup>
-          <Button onClick={() => toggleThemeHandler('light')}><i className="ki-outline ki-night-day"></i></Button>
-          <Button onClick={() => toggleThemeHandler('dark')}><i className="ki-outline ki-moon"></i></Button>
+          <ButtonGroup.Item onClick={() => toggleThemeHandler('light')}><i className="ki-outline ki-night-day"></i></ButtonGroup.Item>
+          <ButtonGroup.Item onClick={() => toggleThemeHandler('dark')}><i className="ki-outline ki-moon"></i></ButtonGroup.Item>
         </ButtonGroup>
       </div>
     </div>

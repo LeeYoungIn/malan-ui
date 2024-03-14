@@ -18,8 +18,9 @@ export default function () {
     <p>Group</p>
     <div className="flex flex-wrap items-center gap-4">
       <ButtonGroup>
-        <Button>Default</Button>
-        <Button>Red</Button>
+        <ButtonGroup.Item>Default</ButtonGroup.Item>
+        <ButtonGroup.Item>Center</ButtonGroup.Item>
+        <ButtonGroup.Item>Red</ButtonGroup.Item>
       </ButtonGroup>
     </div>
   </div>
