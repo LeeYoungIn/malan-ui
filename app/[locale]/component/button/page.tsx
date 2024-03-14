@@ -1,4 +1,4 @@
-import { Button } from '@ui/components'
+import { Button, ButtonGroup } from '@ui/components'
 
 export default function () {
   return <div>
@@ -13,6 +13,14 @@ export default function () {
     <div className="flex flex-wrap items-center gap-4">
       <Button>Default</Button>
       <Button className="bg-red-800 dark:bg-red-400 hover:bg-red-600 text-white">Red</Button>
+    </div>
+
+    <p>Group</p>
+    <div className="flex flex-wrap items-center gap-4">
+      <ButtonGroup>
+        <Button>Default</Button>
+        <Button>Red</Button>
+      </ButtonGroup>
     </div>
   </div>
 }
