@@ -11,7 +11,7 @@ export function Checkbox({ ...props }: CheckboxProps) {
 
 export function LabelCheckbox({ label, containerClass, labelClass, ...props }: Omit<CheckboxProps, 'id'> & { id: string, label: ReactNode, containerClass?: string, labelClass?: string }) {
   return <div className={clsx('label-checkbox flex items-center gap-2', containerClass)}>
-    <input type="checkbox" {...props}/>
+    <Checkbox {...props}/>
     <label htmlFor={props.id} className={labelClass}>{label}</label>
   </div>
 }
