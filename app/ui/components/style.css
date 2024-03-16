@@ -17,16 +17,35 @@
     @apply first:rounded-l-xl last:rounded-r-xl [&:first-child>.btn]:rounded-l-xl [&:last-child>.btn]:rounded-r-xl;
   }
 
-  input, textarea {
+  .input-text,
+  textarea {
     @apply w-full px-4 py-3 outline-0 rounded-xl shadow-none;
-    @apply border border-stone-200 dark:border-stone-800 placeholder-stone-400 dark:placeholder-stone-600 placeholder:font-light bg-transparent;
+    @apply border border-stone-300 dark:border-stone-700 placeholder-stone-400 dark:placeholder-stone-600 placeholder:font-light bg-transparent;
     @apply disabled:opacity-70;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    @apply w-4 h-4 p-0 appearance-none align-middle;
+    @apply bg-stone-300 checked:bg-stone-400 dark:bg-stone-600 checked:dark:bg-stone-500 rounded-md;
+    @apply disabled:cursor-not-allowed disabled:opacity-50 rounded-md;
+  }
+
+  input[type='checkbox'] {
+    mask-image: url("./res/tick_square_empty.svg");
+    mask-repeat: no-repeat;
+    mask-position: center left;
+    mask-size: contain;
+  }
+
+  input[type='checkbox']:checked {
+    mask-image: url("./res/tick_square.svg");
+    animation: animateCheck 150ms linear;
   }
 
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+    @apply m-0 appearance-none;
   }
 
   .input-group {
@@ -35,5 +54,16 @@
     @apply [&>span:first-child]:rounded-l-xl [&>span:last-child]:rounded-r-xl;
     @apply flex items-stretch w-full rounded-xl;
     @apply border border-stone-200 dark:border-stone-800;
+  }
+}
+
+@keyframes animateCheck {
+  from {
+    opacity: 0;
+    transform: scale(120%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
   }
 }

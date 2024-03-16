@@ -16,6 +16,7 @@ export default function () {
   const menu = useMemo(() => map([
     { url: '/component/badge', label: 'Badge' },
     { url: '/component/button', label: 'Button' },
+    { url: '/component/checkbox', label: 'Checkbox' },
     { url: '/component/input', label: 'Input' }
   ], item => ({ ...item, active: pathname === item.url })), [pathname])
 
