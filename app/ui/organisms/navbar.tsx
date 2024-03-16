@@ -17,7 +17,8 @@ export default function () {
     { url: '/component/badge', label: 'Badge' },
     { url: '/component/button', label: 'Button' },
     { url: '/component/checkbox', label: 'Checkbox' },
-    { url: '/component/input', label: 'Input' }
+    { url: '/component/input', label: 'Input' },
+    { url: '/component/radio', label: 'Radio' }
   ], item => ({ ...item, active: pathname === item.url })), [pathname])
 
   const toggleNavHandler = useCallback(() => {
