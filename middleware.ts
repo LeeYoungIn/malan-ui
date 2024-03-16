@@ -22,7 +22,6 @@ export default async function middleware(req: NextRequest) {
     return intlResponse
 }
 
-
 export const config = {
   matcher: [
     `/(${locales.join('|')})/:path*`,
