@@ -67,6 +67,19 @@
     @apply flex items-stretch w-full rounded-xl;
     @apply border border-stone-200 dark:border-stone-800;
   }
+
+  progress {
+    @apply w-full h-2 rounded-full;
+  }
+
+  progress::-webkit-progress-bar,
+  progress::-webkit-progress-value {
+    @apply bg-stone-200 dark:bg-stone-700 rounded-full;
+  }
+
+  progress::-webkit-progress-value {
+    @apply bg-stone-400 dark:bg-stone-400;
+  }
 }
 
 @keyframes animateCheck {

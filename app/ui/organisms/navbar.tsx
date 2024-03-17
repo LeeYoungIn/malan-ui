@@ -19,6 +19,7 @@ export default function () {
     { url: '/component/checkbox', label: 'Checkbox' },
     { url: '/component/input', label: 'Input' },
     { url: '/component/loading', label: 'Loading' },
+    { url: '/component/progress', label: 'Progress' },
     { url: '/component/radio', label: 'Radio' }
   ], item => ({ ...item, active: pathname === item.url })), [pathname])
 
