@@ -31,6 +31,15 @@
     @apply first:rounded-l-xl last:rounded-r-xl [&:first-child>.btn]:rounded-l-xl [&:last-child>.btn]:rounded-r-xl;
   }
 
+  .collapse-container {
+    @apply [&>li>label]:flex [&>li>label]:items-center [&>li>label]:justify-between [&>li>label]:cursor-pointer;
+    @apply [&>li>label]:font-semibold [&>li>label]:text-lg [&>li>label+div]:text-stone-600;
+    @apply divide-y divide-stone-700 dark:divide-stone-200;
+    @apply [&>li>label]:after:content-[''] [&>li>label]:after:bg-black [&>li>label]:after:w-4 [&>li>label]:after:h-4;
+    @apply [&>li>label]:after:mask-[url("./res/down.svg")] [&>li>label]:after:mask-default;
+    @apply [&>li>label]:after:transition-transform [&>li>label]:after:duration-200;
+  }
+
   .input-text,
   textarea {
     @apply w-full px-4 py-3 outline-0 rounded-xl shadow-none;

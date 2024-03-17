@@ -17,6 +17,10 @@
       "title": "Checkbox",
       "description": "MALAN UI Checkbox"
     },
+    "collapse": {
+      "title": "Collapse",
+      "description": "MALAN UI Collapse"
+    },
     "input": {
       "title": "Input",
       "description": "MALAN UI Input"

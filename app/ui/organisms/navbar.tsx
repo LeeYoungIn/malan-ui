@@ -18,6 +18,7 @@ export default function () {
     { url: '/component/badge', label: 'Badge' },
     { url: '/component/button', label: 'Button' },
     { url: '/component/checkbox', label: 'Checkbox' },
+    { url: '/component/collapse', label: 'Collapse' },
     { url: '/component/input', label: 'Input' },
     { url: '/component/loading', label: 'Loading' },
     { url: '/component/progress', label: 'Progress' },
