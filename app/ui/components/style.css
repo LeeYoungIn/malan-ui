@@ -6,15 +6,15 @@
 @layer components {
   .accordion {
     @apply rounded-xl overflow-hidden;
-    @apply [&>button]:relative [&>button]:z-10 [&>button]:flex [&>button]:items-center [&>button]:w-full;
+    @apply [&>button]:relative [&>button]:z-10 [&>button]:flex [&>button]:items-center [&>button]:justify-between [&>button]:w-full;
     @apply [&>button]:transition-[border-radius] [&[aria-expanded="true"]>button]:rounded-b-none;
     @apply [&>button]:after:content-[''] [&>button]:after:bg-black [&>button]:after:w-4 [&>button]:after:h-4;
-    @apply [&>button]:after:transition-[height] [&>button]:after:duration-[500ms] [&>button]:after:ease-linear;
+    @apply [&>button]:after:transition-transform [&>button]:after:duration-200;
     @apply [&>button]:after:mask-[url("./res/down.svg")] [&>button]:after:mask-default [&[aria-expanded="true"]>button]:after:-rotate-180;
     @apply [&>button]:px-6 [&>ul]:px-6 [&>button]:bg-stone-200 [&>button]:hover:bg-stone-200 [&>ul]:bg-stone-200;
     @apply [&>ul]:grid [&>ul]:auto-rows-fr [&>ul]:divide-y [&>ul]:divide-white;
     @apply [&>ul]:transition-accordion [&>ul]:duration-200 [&>ul]:overflow-hidden [&>ul]:rounded-b-xl;
-    @apply [&>ul]:transition-all [&>ul]:max-h-0 [&[aria-expanded="true"]>ul]:max-h-full [&>ul]:-translate-y-full [&[aria-expanded="true"]>ul]:translate-y-0;
+    @apply [&>ul]:max-h-0 [&[aria-expanded="true"]>ul]:max-h-full [&>ul]:-translate-y-full [&[aria-expanded="true"]>ul]:translate-y-0;
   }
 
   .btn {
