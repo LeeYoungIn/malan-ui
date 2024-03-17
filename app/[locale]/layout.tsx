@@ -1,9 +1,11 @@
+import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server'
 import { PropsWithChildren } from 'react'
 
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 
+import { getMessages } from '@/i18n'
 import { locales } from '@/navigation'
 import { getMetadata } from '@lib/metadata'
 
@@ -26,22 +28,30 @@ export async function generateMetadata({ params: { locale } }: Props) {
   })
 }
 
-export default function RootLayout({ children, params: { locale } }: Props) {
+export default async function RootLayout({ children, params: { locale } }: Props) {
   unstable_setRequestLocale(locale)
-  return <ThemeContextProvider>
-    <NavProvider>
-      <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="w-full h-full bg-stone-50 dark:bg-stone-950 text-black dark:text-white">
-      <Header/>
-      <main className="container grid grid-cols-[max-content,1fr]">
-        <Navbar/>
-        <div className="px-4 py-2.5">
-          {children}
-        </div>
-      </main>
-      <Footer/>
-      </body>
-      </html>
-    </NavProvider>
-  </ThemeContextProvider>
+
+  let messages
+  try {
+    messages = await getMessages(locale)
+  } catch (e) { }
+
+  return <NextIntlClientProvider locale={locale} messages={messages}>
+    <ThemeContextProvider>
+      <NavProvider>
+        <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable}`}>
+        <body className="w-full h-full bg-stone-50 dark:bg-stone-950 text-black dark:text-white">
+        <Header/>
+        <main className="container grid grid-cols-[max-content,1fr]">
+          <Navbar/>
+          <div className="px-4 py-2.5">
+            {children}
+          </div>
+        </main>
+        <Footer/>
+        </body>
+        </html>
+      </NavProvider>
+    </ThemeContextProvider>
+  </NextIntlClientProvider>
 }
