@@ -19,13 +19,19 @@
     "publish": "rm -rf dist && mkdir dist && babel app/ui/components -d dist --copy-files"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "clsx": "^2.1.0",
     "geist": "^1.2.2",
     "lodash": "^4.17.21",
     "next": "14.1.3",
     "next-intl": "^3.9.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-popper": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "react-popper": "^2.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.9",

@@ -87,6 +87,16 @@
     @apply border border-stone-200 dark:border-stone-800;
   }
 
+  .popper-dropdown {
+    @apply min-w-44 [&_.popper-dropdown-item]:min-w-44;
+    @apply pl-4 pr-3 py-2 bg-white dark:bg-stone-800 rounded-xl shadow-xl shadow-stone-100;
+  }
+
+  .popper-dropdown .popper-dropdown-item {
+    @apply cursor-pointer py-2 text-stone-600/60 hover:text-stone-600 after:bg-stone-600/60 hover:after:bg-stone-600;
+    @apply after:w-3.5 after:h-3.5 after:mask-default after:mask-[url("./res/arrow_right.svg")];
+  }
+
   progress {
     @apply w-full h-2 rounded-full;
   }

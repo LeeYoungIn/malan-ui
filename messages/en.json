@@ -29,6 +29,10 @@
       "title": "Loading",
       "description": "MALAN UI Loading"
     },
+    "menu": {
+      "title": "Menu",
+      "description": "MALAN UI Menu"
+    },
     "progress": {
       "title": "Progress",
       "description": "MALAN UI Progress"

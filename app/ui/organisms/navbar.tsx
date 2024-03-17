@@ -21,6 +21,7 @@ export default function () {
     { url: '/component/collapse', label: 'Collapse' },
     { url: '/component/input', label: 'Input' },
     { url: '/component/loading', label: 'Loading' },
+    { url: '/component/menu', label: 'Menu' },
     { url: '/component/progress', label: 'Progress' },
     { url: '/component/radio', label: 'Radio' }
   ], item => ({ ...item, active: pathname === item.url })), [pathname])
