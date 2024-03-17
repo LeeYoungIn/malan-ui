@@ -1,4 +1,14 @@
+import { getTranslations } from 'next-intl/server'
+import { getMetadata } from '@lib/metadata'
 import { LabelRadio, Radio } from '@ui/components'
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: 'metadata.radio' })
+  return getMetadata({
+    title: t('title'),
+    description: t('description')
+  })
+}
 
 export default function () {
   return <>

@@ -1,5 +1,27 @@
 {
   "title": "UI KR",
+  "metadata": {
+    "badge": {
+      "title": "Badge",
+      "description": "MALAN UI Badge"
+    },
+    "button": {
+      "title": "Button",
+      "description": "MALAN UI Button"
+    },
+    "checkbox": {
+      "title": "Checkbox",
+      "description": "MALAN UI Checkbox"
+    },
+    "input": {
+      "title": "Input",
+      "description": "MALAN UI Input"
+    },
+    "radio": {
+      "title": "Radio",
+      "description": "MALAN UI Radio"
+    }
+  },
   "Error": {
     "title": "Something went wrong!",
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
