@@ -1,6 +1,10 @@
 {
   "title": "UI KR",
   "metadata": {
+    "accordion": {
+      "title": "Accordion",
+      "description": "MALAN UI Accordion"
+    },
     "badge": {
       "title": "Badge",
       "description": "MALAN UI Badge"

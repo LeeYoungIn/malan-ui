@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
   content: [
@@ -23,9 +24,22 @@ const config: Config = {
         lgTo: { max: '1023px' },
         xlTo: { max: '1279px' },
         '2xlTo': { max: '1535px' }
+      },
+      transitionProperty: {
+        'accordion': 'max-height, transform',
       }
     }
   },
-  plugins: []
+  plugins: [
+    plugin(function ({ matchUtilities }) {
+      matchUtilities(
+        {
+          mask: (value) => ({
+            maskImage: value
+          })
+        }
+      )
+    })
+  ]
 }
 export default config

@@ -1,8 +1,22 @@
 @config "./tailwind.components.config.ts";
 
 @tailwind components;
+@tailwind utilities;
 
 @layer components {
+  .accordion {
+    @apply rounded-xl overflow-hidden;
+    @apply [&>button]:relative [&>button]:z-10 [&>button]:flex [&>button]:items-center [&>button]:w-full;
+    @apply [&>button]:transition-[border-radius] [&[aria-expanded="true"]>button]:rounded-b-none;
+    @apply [&>button]:after:content-[''] [&>button]:after:bg-black [&>button]:after:w-4 [&>button]:after:h-4;
+    @apply [&>button]:after:transition-[height] [&>button]:after:duration-[500ms] [&>button]:after:ease-linear;
+    @apply [&>button]:after:mask-[url("./res/down.svg")] [&>button]:after:mask-default [&[aria-expanded="true"]>button]:after:-rotate-180;
+    @apply [&>button]:px-6 [&>ul]:px-6 [&>button]:bg-stone-200 [&>button]:hover:bg-stone-200 [&>ul]:bg-stone-200;
+    @apply [&>ul]:grid [&>ul]:auto-rows-fr [&>ul]:divide-y [&>ul]:divide-white;
+    @apply [&>ul]:transition-accordion [&>ul]:duration-200 [&>ul]:overflow-hidden [&>ul]:rounded-b-xl;
+    @apply [&>ul]:transition-all [&>ul]:max-h-0 [&[aria-expanded="true"]>ul]:max-h-full [&>ul]:-translate-y-full [&[aria-expanded="true"]>ul]:translate-y-0;
+  }
+
   .btn {
     @apply rounded-xl text-black;
   }
@@ -32,10 +46,7 @@
 
   input[type='checkbox'] {
     @apply bg-stone-300 checked:bg-stone-400 dark:bg-stone-600 checked:dark:bg-stone-500 rounded-md;
-    mask-image: url("./res/tick_square_empty.svg");
-    mask-repeat: no-repeat;
-    mask-position: center left;
-    mask-size: contain;
+    @apply mask-[url("./res/tick_square_empty.svg")] mask-default;
   }
 
   input[type='checkbox']:checked {
@@ -79,6 +90,14 @@
 
   progress::-webkit-progress-value {
     @apply bg-stone-400 dark:bg-stone-400;
+  }
+}
+
+@layer utilities {
+  .mask-default {
+    mask-repeat: no-repeat;
+    mask-position: center left;
+    mask-size: contain;
   }
 }
 

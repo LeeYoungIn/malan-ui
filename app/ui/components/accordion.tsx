@@ -1,0 +1,27 @@
+'use client'
+import { useCallback, useState } from 'react'
+import clsx from 'clsx'
+
+import { Button, ButtonProps } from '@ui/components/button'
+
+interface AccordionProps {
+  title: string
+  buttonProps?: ButtonProps
+  className?: string
+  children: any
+}
+
+export function Accordion({ title, buttonProps, children, className }: AccordionProps) {
+  const [open, setOpen] = useState(true)
+
+  const toggle = useCallback(() => setOpen(v => !v), [])
+
+  return <div aria-expanded={open} className={clsx('accordion', className)}>
+    <Button onClick={toggle} {...buttonProps}>
+      <span className="flex-1">{title}&nbsp;&nbsp;</span>
+    </Button>
+    <ul className="accordion-content">
+      {children}
+    </ul>
+  </div>
+}
