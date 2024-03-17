@@ -38,3 +38,27 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## 참고 내용
 [Geist Design System](https://vercel.com/geist/introduction)
+[Metronic](https://preview.keenthemes.com/html/metronic/docs/index)
+
+
+## 필요 작업
+- breadcrumb
+- calendar [Fullcalendar](https://fullcalendar.io/docs)
+- card
+- chart
+- datepicker [Tempus Dominus](https://getdatepicker.com/), [Flatpickr](https://flatpickr.js.org/), [DateRangePicker](https://www.daterangepicker.com/)
+- drawer
+- editor
+- input [Floating](https://preview.keenthemes.com/html/metronic/docs/base/forms/floating-labels)
+- menu
+- modal
+- pagination
+- select [Select2](https://select2.org/)
+- skeleton
+- switch
+- table [Datatable](https://datatables.net/)
+- tabs
+- tag [Tagify](https://yaireo.github.io/tagify/)
+- toast [Toaster](https://github.com/petekeller2/toastr)
+- toggle
+- tooltip
