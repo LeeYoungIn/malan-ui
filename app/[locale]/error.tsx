@@ -16,16 +16,14 @@ export default function Error({ error, reset }: Props) {
 
   return <div>
     {t.rich('description', {
-      p: (chunks) => <p className="mt-4">{chunks}</p>,
-      retry: (chunks) => (
+      p: chunks => <p className="mt-4">{chunks}</p>,
+      retry: chunks =>
         <button
-          className="text-white underline underline-offset-2"
+          className="text-black dark:text-white underline underline-offset-2"
           onClick={reset}
-          type="button"
-        >
+          type="button">
           {chunks}
         </button>
-      )
     })}
   </div>
 }
