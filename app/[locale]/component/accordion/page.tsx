@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { getMetadata } from '@lib/metadata'
-import { Accordion } from '@ui/components'
+import { Accordion, AccordionItem } from '@ui/components'
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: 'metadata.accordion' })
@@ -15,7 +15,11 @@ export default function () {
     <section>
       <h3>Default</h3>
       <div className="flex flex-wrap items-center gap-4">
-        <Accordion title="Default">Default</Accordion>
+        <Accordion title="Default">
+          <AccordionItem>Item 1</AccordionItem>
+          <AccordionItem>Item 2</AccordionItem>
+          <AccordionItem>Item 3</AccordionItem>
+        </Accordion>
       </div>
     </section>
   </>

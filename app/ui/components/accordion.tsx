@@ -1,5 +1,5 @@
 'use client'
-import { useCallback, useState } from 'react'
+import { PropsWithChildren, useCallback, useState } from 'react'
 import clsx from 'clsx'
 
 import { Button, ButtonProps } from '@ui/components/button'
@@ -20,8 +20,14 @@ export function Accordion({ title, buttonProps, children, className }: Accordion
     <Button onClick={toggle} {...buttonProps}>
       <span className="flex-1">{title}&nbsp;&nbsp;</span>
     </Button>
-    <ul className="accordion-content">
+    <ul>
       {children}
     </ul>
   </div>
+}
+
+export function AccordionItem({ children }: PropsWithChildren) {
+  return <li>
+    {children}
+  </li>
 }
