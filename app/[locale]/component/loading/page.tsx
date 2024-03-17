@@ -3,7 +3,7 @@ import { getMetadata } from '@lib/metadata'
 import { Loading, LoadingSpin } from '@ui/components'
 
 export async function generateMetadata({ params: { locale } }: any) {
-  const t = await getTranslations({ locale, namespace: 'metadata.badge' })
+  const t = await getTranslations({ locale, namespace: 'metadata.loading' })
   return getMetadata({
     title: t('title'),
     description: t('description')

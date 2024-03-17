@@ -17,6 +17,14 @@
       "title": "Input",
       "description": "MALAN UI Input"
     },
+    "loading": {
+      "title": "Loading",
+      "description": "MALAN UI Loading"
+    },
+    "progress": {
+      "title": "Progress",
+      "description": "MALAN UI Progress"
+    },
     "radio": {
       "title": "Radio",
       "description": "MALAN UI Radio"
