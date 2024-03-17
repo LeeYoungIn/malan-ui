@@ -5,8 +5,8 @@ import { InputProps } from '@ui/components/input'
 
 type CheckboxProps = Omit<InputProps, 'type'>
 
-export function Checkbox({ ...props }: CheckboxProps) {
-  return <input type="checkbox" {...props}/>
+export function Checkbox({ className, ...props }: CheckboxProps) {
+  return <input type="checkbox" className={clsx('input-checkbox', className)} {...props}/>
 }
 
 export function LabelCheckbox({ label, containerClass, labelClass, ...props }: Omit<CheckboxProps, 'id'> & { id: string, label: ReactNode, containerClass?: string, labelClass?: string }) {

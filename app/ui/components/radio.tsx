@@ -5,8 +5,8 @@ import { InputProps } from '@ui/components/input'
 
 type RadioProps = Omit<InputProps, 'type'>
 
-export function Radio({ ...props }: RadioProps) {
-  return <input type="radio" {...props}/>
+export function Radio({ className, ...props }: RadioProps) {
+  return <input type="radio" className={clsx('input-radio', className)} {...props}/>
 }
 
 export function LabelRadio({ label, containerClass, labelClass, ...props }: Omit<RadioProps, 'id'> & { id: string, label: ReactNode, containerClass?: string, labelClass?: string }) {

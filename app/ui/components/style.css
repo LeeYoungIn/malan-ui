@@ -38,23 +38,22 @@
     @apply disabled:opacity-70;
   }
 
-  input[type='checkbox'],
-  input[type='radio'] {
+  .input-checkbox,
+  .input-radio {
     @apply w-4 h-4 p-0 appearance-none align-middle;
     @apply disabled:cursor-not-allowed disabled:opacity-50
   }
 
-  input[type='checkbox'] {
+  .input-checkbox {
     @apply bg-stone-300 checked:bg-stone-400 dark:bg-stone-600 checked:dark:bg-stone-500 rounded-md;
-    @apply mask-[url("./res/tick_square_empty.svg")] mask-default;
+    @apply mask-[url("./res/tick_square_empty.svg")] checked:mask-[url("./res/tick_square.svg")] mask-default;
   }
 
-  input[type='checkbox']:checked {
-    mask-image: url("./res/tick_square.svg");
+  .input-checkbox:checked {
     animation: animateCheck 150ms linear;
   }
 
-  input[type='radio'] {
+  .input-radio {
     @apply rounded-full;
     @apply border border-stone-300 checked:border-stone-400 dark:border-stone-600 checked:dark:border-stone-500;
     @apply checked:after:bg-stone-400 after:dark:bg-stone-600 checked:after:dark:bg-stone-500;
@@ -62,7 +61,7 @@
     @apply after:-translate-y-1/2;
   }
 
-  input[type='radio']:checked:after {
+  .input-radio:checked:after {
     animation: animateRadio 150ms linear;
   }
 
