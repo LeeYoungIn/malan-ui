@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, Children } from 'react'
+import { ButtonHTMLAttributes, Children, forwardRef } from 'react'
 import clsx from 'clsx'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,8 +8,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   withIcon?: boolean
 }
 
-export function Button({ type = 'button', size = 'base', variant, onlyIcon = false, withIcon = false, className, ...props }: ButtonProps) {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ type = 'button', size = 'base', variant, onlyIcon = false, withIcon = false, className, ...props }, ref) => {
   return <button
+    ref={ref}
     type={type} {...props}
     className={clsx('btn',
       {
@@ -22,7 +23,7 @@ export function Button({ type = 'button', size = 'base', variant, onlyIcon = fal
         'bg-stone-200 dark:bg-white hover:bg-stone-300 dark:disabled:bg-stone-400': variant !== 'clean'
       },
       className)}/>
-}
+})
 
 export function ButtonGroup({ onlyIcon, children, className }: Pick<ButtonProps, 'onlyIcon' | 'children' | 'className'>) {
   return <div className={clsx('btn-group', className)}>
