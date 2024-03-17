@@ -33,6 +33,10 @@
       "title": "Menu",
       "description": "MALAN UI Menu"
     },
+    "modal": {
+      "title": "Modal",
+      "description": "MALAN UI Modal"
+    },
     "progress": {
       "title": "Progress",
       "description": "MALAN UI Progress"
