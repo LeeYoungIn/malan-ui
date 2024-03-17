@@ -7,10 +7,10 @@ import clsx from 'clsx'
 
 import { Button } from '@ui/components/button'
 
-type DropdownItemType = { name: string, label: string, onClick?(): void }
-type DropdownOptionType = DropdownItemType & { subMenu?: DropdownItemType[] }
+export type DropdownItemType = { name: string, label: string, onClick?(): void }
+export type DropdownOptionType = DropdownItemType & { subMenu?: DropdownItemType[] }
 
-interface DropdownProps {
+export interface DropdownProps {
   toggler: ReactNode
   buttonText?: string
   options?: DropdownOptionType[]

@@ -1,9 +1,9 @@
 import { HTMLAttributes, ReactNode } from 'react'
 import clsx from 'clsx'
 
-type CollapseItemType = { id: string, title: ReactNode, children: ReactNode }
+export type CollapseItemType = { id: string, title: ReactNode, children: ReactNode }
 
-interface CollapseProps extends HTMLAttributes<HTMLUListElement> {
+export interface CollapseProps extends HTMLAttributes<HTMLUListElement> {
   className?: string
 }
 

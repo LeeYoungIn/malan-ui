@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import { Button, ButtonProps } from '@ui/components/button'
 
-interface AccordionProps {
+export interface AccordionProps {
   title: string
   buttonProps?: ButtonProps
   className?: string

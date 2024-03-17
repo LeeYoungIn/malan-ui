@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 import { InputProps } from '@ui/components/input'
 
-type CheckboxProps = Omit<InputProps, 'type'>
+export type CheckboxProps = Omit<InputProps, 'type'>
 
 export function Checkbox({ className, ...props }: CheckboxProps) {
   return <input type="checkbox" className={clsx('input-checkbox', className)} {...props}/>

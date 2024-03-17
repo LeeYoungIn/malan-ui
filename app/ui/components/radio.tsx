@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 import { InputProps } from '@ui/components/input'
 
-type RadioProps = Omit<InputProps, 'type'>
+export type RadioProps = Omit<InputProps, 'type'>
 
 export function Radio({ className, ...props }: RadioProps) {
   return <input type="radio" className={clsx('input-radio', className)} {...props}/>
