@@ -2,7 +2,7 @@
 import { useCallback, useContext } from 'react'
 import clsx from 'clsx'
 
-import { Button, ButtonGroup } from '@ui/components'
+import { Button, Switch, SwitchItem } from '@ui/components'
 import ThemeContext, { useTheme } from './themeLayout'
 import { NavContext } from './navbar'
 
@@ -18,6 +18,17 @@ export default function Header() {
     navCtx.toggleNavHandler()
   }, [navCtx])
 
+  const toggleThemeSwitch = useCallback((e: any) => {
+    switch (e.target.id) {
+      case 'is-dark-theme0':
+        toggleThemeHandler('light')
+        break
+      case 'is-dark-theme1':
+        toggleThemeHandler('dark')
+        break
+    }
+  }, [toggleThemeHandler])
+
   return <header className="mb-8 py-2 border-b-[1px] border-stone-200 dark:border-stone-800">
     <div className="container grid grid-cols-[max-content,1fr,max-content] items-center">
       <div className="flex">
@@ -27,20 +38,20 @@ export default function Header() {
       </div>
       <div>MALAN</div>
       <div>
-        <ButtonGroup onlyIcon>
-          <ButtonGroup.Item
-            onlyIcon
+        <Switch id="is-dark-theme" name="is-dark-theme" onlyIcon>
+          <SwitchItem
+            checked={!isDarkTheme}
             className={clsx(!isDarkTheme && THEME_ACTIVE)}
-            onClick={() => toggleThemeHandler('light')}>
+            onChange={toggleThemeSwitch}>
             <i className="ki-outline ki-night-day text-xl"></i>
-          </ButtonGroup.Item>
-          <ButtonGroup.Item
-            onlyIcon
+          </SwitchItem>
+          <SwitchItem
+            checked={isDarkTheme}
             className={clsx(isDarkTheme && THEME_ACTIVE)}
-            onClick={() => toggleThemeHandler('dark')}>
+            onChange={toggleThemeSwitch}>
             <i className="ki-outline ki-moon text-xl"></i>
-          </ButtonGroup.Item>
-        </ButtonGroup>
+          </SwitchItem>
+        </Switch>
       </div>
     </div>
   </header>

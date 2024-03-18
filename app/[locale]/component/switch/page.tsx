@@ -15,10 +15,42 @@ export default function () {
     <section>
       <h3>Default</h3>
       <div className="flex flex-wrap items-center gap-4">
-        <Switch name="test">
-          <SwitchItem id="switch1" defaultChecked>Item 1</SwitchItem>
-          <SwitchItem id="switch2">Item 2</SwitchItem>
-          <SwitchItem id="switch3">Item 3</SwitchItem>
+        <Switch id="switch-default" name="test">
+          <SwitchItem defaultChecked>Item 1</SwitchItem>
+          <SwitchItem>Item 2</SwitchItem>
+          <SwitchItem>Item 3</SwitchItem>
+        </Switch>
+      </div>
+    </section>
+
+    <section>
+      <h3>With Icon</h3>
+      <div className="flex flex-wrap items-center gap-4">
+        <Switch id="switch-with" name="with-icons" withIcon>
+          <SwitchItem defaultChecked onlyIcon>
+            <i className="ki-outline ki-night-day text-xl"></i>
+          </SwitchItem>
+          <SwitchItem onlyIcon>
+            <i className="ki-outline ki-moon text-xl"></i>
+          </SwitchItem>
+          <SwitchItem>Item 3</SwitchItem>
+        </Switch>
+      </div>
+    </section>
+
+    <section>
+      <h3>Only Icon</h3>
+      <div className="flex flex-wrap items-center gap-4">
+        <Switch id="switch-icon" name="icons" onlyIcon>
+          <SwitchItem defaultChecked>
+            <i className="ki-outline ki-night-day text-xl"></i>
+          </SwitchItem>
+          <SwitchItem>
+            <i className="ki-outline ki-moon text-xl"></i>
+          </SwitchItem>
+          <SwitchItem>
+            <i className="ki-outline ki-moon text-xl"></i>
+          </SwitchItem>
         </Switch>
       </div>
     </section>
