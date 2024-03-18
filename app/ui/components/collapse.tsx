@@ -16,11 +16,13 @@ export function Collapse({ className, children, ...props }: CollapseProps) {
 export function CollapseItem({ id, title, children }: CollapseItemType) {
   return <li className="overflow-hidden">
     <input id={id} type="checkbox" className="peer hidden relative z-10"/>
-    <label htmlFor={id} className="relative z-10 block w-full bg-stone-50 p-4 peer-checked:pb-3 peer-checked:after:-rotate-180">
+    <label htmlFor={id} className={clsx(COLLAPSE_BG_CLASS, 'relative z-10 block p-4 peer-checked:pb-3 peer-checked:after:-rotate-180')}>
       {title}&nbsp;&nbsp;
     </label>
-    <div className="w-full bg-stone-50 transition-accordion peer-checked:transition-accordion duration-200 max-h-0 peer-checked:max-h-full -translate-y-full peer-checked:translate-y-0">
+    <div className={clsx(COLLAPSE_BG_CLASS, 'transition-accordion peer-checked:transition-accordion duration-200 max-h-0 peer-checked:max-h-full -translate-y-full peer-checked:translate-y-0')}>
       <div className="px-4 pb-4">{children}</div>
     </div>
   </li>
 }
+
+const COLLAPSE_BG_CLASS= 'w-full bg-stone-50 dark:bg-stone-950'
