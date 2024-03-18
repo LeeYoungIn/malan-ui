@@ -3,7 +3,7 @@ import createMiddleware from 'next-intl/middleware'
 
 import { localePrefix, locales } from '@/navigation'
 
-const PUBLIC_PAGES = ['/', 'api', '_next/static', '_next/image', 'favicon.ico', 'next.svg', 'vercel.svg']
+const PUBLIC_PAGES = ['/', 'api', '_next/static', '_next/image', 'favicon.ico', 'logo`.svg', 'next.svg', 'vercel.svg']
 
 const intlMiddleware = createMiddleware({
   locales,
