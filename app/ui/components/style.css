@@ -107,10 +107,10 @@
   }
 
   .modal {
-    @apply rounded-xl dark:bg-stone-900 dark:border-2 dark:border-stone-800 dark:text-stone-50;
-    @apply [&>.modal-footer]:border-t-2 dark:[&>.modal-footer]:border-stone-800;
+    @apply rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-2 dark:border-stone-800 dark:text-stone-50;
+    @apply [&>.modal-footer]:border-t [&>.modal-footer]:dark:border-t-2 dark:[&>.modal-footer]:border-stone-800;
     @apply [&>*]:px-6 [&>*]:py-4 [&>.modal-header+.modal-body]:pt-2;
-    @apply [&>.modal-footer]:p-0 [&>.modal-footer>button]:dark:text-stone-50 [&>.modal-footer>button]:rounded-t-none [&>.modal-footer>button:hover]:dark:bg-stone-800;
+    @apply [&>.modal-footer]:p-0 [&>.modal-footer>button]:dark:text-stone-50 [&>.modal-footer>button]:rounded-t-none [&>.modal-footer>button:hover]:bg-stone-100 [&>.modal-footer>button:hover]:dark:bg-stone-800;
   }
 
   .modal .modal-close {
