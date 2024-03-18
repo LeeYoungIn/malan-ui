@@ -48,6 +48,10 @@
     "switch": {
       "title": "Switch",
       "description": "MALAN UI Switch"
+    },
+    "toggle": {
+      "title": "Toggle",
+      "description": "MALAN UI Toggle"
     }
   },
   "Error": {
