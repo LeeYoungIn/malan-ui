@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react'
+import { InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
 import clsx from 'clsx'
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement>
@@ -6,7 +6,7 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement>
 export function Input({ type = 'text', className, ...props }: InputProps) {
   return <input
     type={type} {...props}
-    className={clsx(`input-${type}`, className)}/>
+    className={clsx(`input-default input-${type}`, className)}/>
 }
 
 export function InputRow({ error, desc, ...props }: InputProps & { error?: string, desc?: string }) {
