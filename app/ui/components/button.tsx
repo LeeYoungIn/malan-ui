@@ -20,7 +20,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ type = 'butt
         'px-5 py-3 text-lg': size === 'lg',
         'text-sm': size === 'sm',
         'flex items-center gap-2': withIcon,
-        'bg-stone-200 dark:bg-white hover:bg-stone-300 dark:disabled:bg-stone-400': variant !== 'clean'
+        'bg-stone-200 dark:bg-white hover:bg-stone-300 hover:dark:bg-stone-200 dark:disabled:bg-stone-400': variant !== 'clean'
       },
       className)}/>
 })
@@ -33,6 +33,6 @@ export function ButtonGroup({ onlyIcon, children, className }: Pick<ButtonProps,
   </div>
 }
 
-ButtonGroup.Item = ({ variant = 'clean', ...props }: ButtonProps) => {
-  return <Button variant={variant} {...props}/>
+ButtonGroup.Item = ({ ...props }: ButtonProps) => {
+  return <Button {...props}/>
 }
