@@ -22,7 +22,7 @@
   }
 
   .btn-group {
-    @apply flex border border-stone-200 dark:border-stone-800 divide-x divide-stone-200 dark:divide-stone-800 rounded-xl;
+    @apply flex border border-stone-200 dark:border-stone-800 divide-x divide-stone-300 dark:divide-stone-800 rounded-xl;
     @apply [&>div>.btn]:rounded-none [&>div:first-child]:rounded-l-xl [&>div:last-child]:rounded-r-xl [&>div:first-child>.btn]:rounded-l-xl [&>div:last-child>.btn]:rounded-r-xl;
   }
 
@@ -60,7 +60,7 @@
   .input-radio {
     @apply rounded-full;
     @apply border border-stone-300 checked:border-stone-400 dark:border-stone-600 checked:dark:border-stone-500;
-    @apply checked:after:bg-stone-400 after:dark:bg-stone-600 checked:after:dark:bg-stone-500;
+    @apply checked:after:bg-stone-400 [&:not(:checked)]:after:dark:bg-transparent checked:after:dark:bg-stone-500;
     @apply after:content-[''] after:block after:w-2/3 after:h-2/3 after:mx-auto after:mt-[50%] after:origin-center after:rounded-full;
     @apply after:-translate-y-1/2;
   }
@@ -84,7 +84,7 @@
 
   .popper-dropdown {
     @apply min-w-44 [&_.popper-dropdown-item]:min-w-44;
-    @apply pl-4 pr-3 py-2 bg-white dark:bg-transparent rounded-xl shadow-xl shadow-stone-100 dark:shadow-none dark:border-2 dark:border-stone-800;
+    @apply pl-4 pr-3 py-2 bg-white dark:bg-stone-950 rounded-xl shadow-xl shadow-stone-100 dark:shadow-none dark:border-2 dark:border-stone-800;
   }
 
   .popper-dropdown .popper-dropdown-item {
