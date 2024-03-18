@@ -132,6 +132,19 @@
     @apply mask-default mask-[url("./res/close_square.svg")] bg-black dark:bg-white;
     @apply w-6 h-6 rounded-none;
   }
+
+  .table {
+    @apply [&_th]:font-medium;
+  }
+
+  .table-default th {
+    @apply bg-stone-100 dark:bg-stone-900 text-stone-400 dark:text-stone-600 first:rounded-l-xl last:rounded-r-xl text-sm;
+  }
+
+  .table th,
+  .table td {
+    @apply px-4 py-3 text-left;
+  }
 }
 
 @layer utilities {

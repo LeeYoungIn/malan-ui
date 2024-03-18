@@ -49,6 +49,10 @@
       "title": "Switch",
       "description": "MALAN UI Switch"
     },
+    "table": {
+      "title": "Table",
+      "description": "MALAN UI Table"
+    },
     "toggle": {
       "title": "Toggle",
       "description": "MALAN UI Toggle"

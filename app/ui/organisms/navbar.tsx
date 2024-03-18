@@ -27,6 +27,7 @@ export default function () {
     { url: '/component/progress', label: 'Progress' },
     { url: '/component/radio', label: 'Radio' },
     { url: '/component/switch', label: 'Switch' },
+    { url: '/component/table', label: 'Table' },
     { url: '/component/toggle', label: 'Toggle' }
   ], item => ({ ...item, active: pathname === item.url })), 'url'), [pathname])
 
