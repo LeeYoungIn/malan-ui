@@ -22,8 +22,13 @@
   }
 
   .btn-group {
-    @apply flex border border-stone-200 dark:border-stone-800 divide-x divide-stone-300 dark:divide-stone-800 rounded-xl;
+    @apply flex divide-x divide-stone-300 dark:divide-stone-800;
     @apply [&>div>.btn]:rounded-none [&>div:first-child]:rounded-l-xl [&>div:last-child]:rounded-r-xl [&>div:first-child>.btn]:rounded-l-xl [&>div:last-child>.btn]:rounded-r-xl;
+  }
+
+  .btn-group,
+  .switch-group {
+    @apply border border-stone-200 dark:border-stone-800 rounded-xl;
   }
 
   .collapse-container {

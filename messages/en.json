@@ -44,6 +44,10 @@
     "radio": {
       "title": "Radio",
       "description": "MALAN UI Radio"
+    },
+    "switch": {
+      "title": "Switch",
+      "description": "MALAN UI Switch"
     }
   },
   "Error": {

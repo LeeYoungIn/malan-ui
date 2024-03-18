@@ -25,7 +25,8 @@ export default function () {
     { url: '/component/menu', label: 'Menu' },
     { url: '/component/modal', label: 'Modal' },
     { url: '/component/progress', label: 'Progress' },
-    { url: '/component/radio', label: 'Radio' }
+    { url: '/component/radio', label: 'Radio' },
+    { url: '/component/switch', label: 'Switch' },
   ], item => ({ ...item, active: pathname === item.url })), 'url'), [pathname])
 
   const toggleNavHandler = useCallback(() => {
