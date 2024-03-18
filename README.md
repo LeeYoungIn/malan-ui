@@ -37,8 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 ## 참고 내용
-[Geist Design System](https://vercel.com/geist/introduction)
-[Metronic](https://preview.keenthemes.com/html/metronic/docs/index)
+- [Geist Design System](https://vercel.com/geist/introduction)
+- [Metronic](https://preview.keenthemes.com/html/metronic/docs/index)
 
 
 ## 필요 작업

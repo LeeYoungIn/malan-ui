@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Button, Modal } from '@ui/components'
 
 export default function () {
-  const [modal1, toggleModal1] = useState(true)
+  const [modal1, toggleModal1] = useState(false)
   return <>
     <section>
       <h3>Default</h3>
