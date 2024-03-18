@@ -1,5 +1,6 @@
 'use client'
 import map from 'lodash/map'
+import sortBy from 'lodash/sortBy'
 import { createContext, PropsWithChildren, useCallback, useContext, useMemo, useState } from 'react'
 import clsx from 'clsx'
 
@@ -13,7 +14,7 @@ export default function () {
   const { isOpen } = useNav()
 
   const pathname = usePathname()
-  const menu = useMemo(() => map([
+  const menu = useMemo(() => sortBy(map([
     { url: '/component/accordion', label: 'Accordion' },
     { url: '/component/badge', label: 'Badge' },
     { url: '/component/button', label: 'Button' },
@@ -25,7 +26,7 @@ export default function () {
     { url: '/component/modal', label: 'Modal' },
     { url: '/component/progress', label: 'Progress' },
     { url: '/component/radio', label: 'Radio' }
-  ], item => ({ ...item, active: pathname === item.url })), [pathname])
+  ], item => ({ ...item, active: pathname === item.url })), 'url'), [pathname])
 
   const toggleNavHandler = useCallback(() => {
     navCtx.toggleNavHandler(false)
