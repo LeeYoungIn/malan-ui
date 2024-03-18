@@ -14,7 +14,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ type = 'butt
     type={type} {...props}
     className={clsx('btn',
       {
-        'p-3 flex items-center justify-center': onlyIcon,
+        'p-3 flex items-center justify-center leading-[100%] *:leading-[100%]': onlyIcon,
         'px-4 py-3': !onlyIcon && !withIcon && size === 'base',
         'px-3 py-2.5': !onlyIcon && withIcon || size === 'sm',
         'px-5 py-3 text-lg': size === 'lg',
