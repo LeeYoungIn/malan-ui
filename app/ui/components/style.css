@@ -11,8 +11,8 @@
     @apply [&>button]:after:content-[''] [&>button]:after:bg-black [&>button]:after:w-4 [&>button]:after:h-4;
     @apply [&>button]:after:transition-transform [&>button]:after:duration-200;
     @apply [&>button]:after:mask-[url("./res/down.svg")] [&>button]:after:mask-default [&[aria-expanded="true"]>button]:after:-rotate-180;
-    @apply [&>button]:px-6 [&>ul]:px-6 [&>button]:bg-stone-200 [&>button]:hover:bg-stone-200 [&>ul]:bg-stone-200;
-    @apply [&>ul]:grid [&>ul]:auto-rows-fr [&>ul]:divide-y [&>ul]:divide-white;
+    @apply [&>ul]:bg-stone-200 [&>ul]:dark:bg-white hover:[&>button]:bg-stone-200 hover:[&>ul]:bg-stone-200 [&>ul]:dark:text-black;
+    @apply [&>ul]:grid [&>ul]:auto-rows-fr [&>ul]:divide-y [&>ul]:divide-stone-700 [&>ul]:dark:divide-stone-200;
     @apply [&>ul]:transition-accordion [&>ul]:duration-200 [&>ul]:overflow-hidden [&>ul]:rounded-b-xl;
     @apply [&>ul]:max-h-0 [&[aria-expanded="true"]>ul]:max-h-full [&>ul]:-translate-y-full [&[aria-expanded="true"]>ul]:translate-y-0;
   }

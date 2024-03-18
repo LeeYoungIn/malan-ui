@@ -17,7 +17,7 @@ export function Accordion({ title, buttonProps, children, className }: Accordion
   const toggle = useCallback(() => setOpen(v => !v), [])
 
   return <div aria-expanded={open} className={clsx('accordion', className)}>
-    <Button onClick={toggle} {...buttonProps}>
+    <Button onClick={toggle} className="px-6" {...buttonProps}>
       <span className="flex-1">{title}&nbsp;&nbsp;</span>
     </Button>
     <ul>
@@ -27,7 +27,7 @@ export function Accordion({ title, buttonProps, children, className }: Accordion
 }
 
 export function AccordionItem({ children }: PropsWithChildren) {
-  return <li>
+  return <li className="px-6 py-2">
     {children}
   </li>
 }
