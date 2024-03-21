@@ -1,7 +1,6 @@
-import { Button } from '@ui/components'
 import { getTranslations } from 'next-intl/server'
 import { getMetadata } from '@lib/metadata'
-import { Table } from '@ui/components/table'
+import { Button, Table } from '@ui/components'
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: 'metadata.table' })
