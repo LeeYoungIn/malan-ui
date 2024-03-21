@@ -134,6 +134,13 @@
     @apply w-6 h-6 rounded-none;
   }
 
+  .tabs-container {
+    @apply [&>ul]:border-b [&>ul]:border-stone-200 [&>ul]:dark:border-stone-800;
+    @apply [&>ul_.btn]:rounded-b-none;
+    @apply [&.clean>ul_.btn]:border-b-2 [&.clean>ul_.btn]:dark:text-white;
+    @apply [&.clean>ul_.btn]:border-transparent [&.clean>ul_.btn.active]:border-stone-500 [&.clean>ul_.btn.active]:dark:border-stone-400;
+  }
+
   .table {
     @apply [&_th]:font-medium [&_th]:text-stone-400 [&_th]:dark:text-stone-600 [&_th]:text-sm;
     @apply [&_th]:px-4 [&_th]:py-3 [&_th]:text-left;

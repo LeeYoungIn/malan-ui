@@ -55,7 +55,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - select [Select2](https://select2.org/)
 - skeleton
 - table [Datatable](https://datatables.net/)
-- tabs
 - tag [Tagify](https://yaireo.github.io/tagify/)
 - toast [Toaster](https://github.com/petekeller2/toastr)
 - tooltip
