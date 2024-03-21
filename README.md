@@ -46,7 +46,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - calendar [Fullcalendar](https://fullcalendar.io/docs)
 - card
 - chart
-- datepicker [Tempus Dominus](https://getdatepicker.com/), [Flatpickr](https://flatpickr.js.org/), [DateRangePicker](https://www.daterangepicker.com/)
+- ~~datepicker~~ [Tempus Dominus](https://getdatepicker.com/), [Flatpickr](https://flatpickr.js.org/), [DateRangePicker](https://www.daterangepicker.com/)
 - drawer
 - editor
 - input [Floating](https://preview.keenthemes.com/html/metronic/docs/base/forms/floating-labels)

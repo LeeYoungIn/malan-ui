@@ -4,6 +4,8 @@
 @tailwind utilities;
 
 @layer components {
+  @import "./datepicker.css";
+
   .accordion {
     @apply rounded-xl overflow-hidden;
     @apply [&>button]:relative [&>button]:z-10 [&>button]:flex [&>button]:items-center [&>button]:justify-between [&>button]:w-full;

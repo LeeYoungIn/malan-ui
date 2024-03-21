@@ -27,10 +27,12 @@
     "next-intl": "^3.9.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-flatpickr": "^3.10.13",
     "react-popper": "^2.3.0"
   },
   "peerDependencies": {
     "@popperjs/core": "^2.11.8",
+    "react-flatpickr": "^3.10.13",
     "react-popper": "^2.3.0"
   },
   "devDependencies": {
@@ -40,6 +42,7 @@
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
+    "@types/react-flatpickr": "^3.8.11",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "^14.1.4",

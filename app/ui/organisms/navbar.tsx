@@ -20,6 +20,7 @@ export default function () {
     { url: '/component/button', label: 'Button' },
     { url: '/component/checkbox', label: 'Checkbox' },
     { url: '/component/collapse', label: 'Collapse' },
+    { url: '/component/datepicker', label: 'Date Picker' },
     { url: '/component/input', label: 'Input' },
     { url: '/component/loading', label: 'Loading' },
     { url: '/component/menu', label: 'Menu' },

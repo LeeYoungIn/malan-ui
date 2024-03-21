@@ -21,6 +21,10 @@
       "title": "Collapse",
       "description": "MALAN UI Collapse"
     },
+    "datepicker": {
+      "title": "DatePicker",
+      "description": "MALAN UI DatePicker"
+    },
     "input": {
       "title": "Input",
       "description": "MALAN UI Input"
