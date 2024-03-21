@@ -38,7 +38,7 @@ export default function () {
     </section>
 
     <section>
-      <h3>Default</h3>
+      <h3>Line</h3>
       <div>
         <Table className="table-line">
           <thead>

@@ -135,16 +135,12 @@
   }
 
   .table {
-    @apply [&_th]:font-medium;
-  }
-
-  .table-default th {
-    @apply bg-stone-100 dark:bg-stone-900 text-stone-400 dark:text-stone-600 first:rounded-l-xl last:rounded-r-xl text-sm;
-  }
-
-  .table th,
-  .table td {
-    @apply px-4 py-3 text-left;
+    @apply [&_th]:font-medium [&_th]:text-stone-400 [&_th]:dark:text-stone-600 [&_th]:text-sm;
+    @apply [&_th]:px-4 [&_th]:py-3 [&_th]:text-left;
+    @apply [&_td]:px-4 [&_td]:py-3 [&_td]:text-left;
+    @apply [&.table-default_th]:bg-stone-100 [&.table-default_th]:dark:bg-stone-900 [&.table-default_th:first-child]:rounded-l-xl [&.table-default_th:last-child]:rounded-r-xl;
+    @apply [&.table-line_th]:border-b [&.table-line_th]:border-stone-200 [&.table-line_th]:dark:border-stone-800;
+    @apply [&.table-line_td]:border-b [&.table-line_td]:border-stone-200 [&.table-line_td]:dark:border-stone-800;
   }
 }
 
