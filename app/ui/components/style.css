@@ -9,15 +9,37 @@
 
   .accordion {
     @apply rounded-xl overflow-hidden;
-    @apply [&>button]:relative [&>button]:z-10 [&>button]:flex [&>button]:items-center [&>button]:justify-between [&>button]:w-full;
-    @apply [&>button]:transition-[border-radius] [&[aria-expanded="true"]>button]:rounded-b-none;
-    @apply [&>button]:after:content-[''] [&>button]:after:bg-black [&>button]:after:w-4 [&>button]:after:h-4;
-    @apply [&>button]:after:transition-transform [&>button]:after:duration-200;
-    @apply [&>button]:after:mask-[url("./res/down.svg")] [&>button]:after:mask-default [&[aria-expanded="true"]>button]:after:-rotate-180;
-    @apply [&>ul]:bg-stone-200 [&>ul]:dark:bg-white hover:[&>button]:bg-stone-200 hover:[&>ul]:bg-stone-200 [&>ul]:dark:text-black;
-    @apply [&>ul]:grid [&>ul]:auto-rows-fr [&>ul]:divide-y [&>ul]:divide-stone-700 [&>ul]:dark:divide-stone-200;
-    @apply [&>ul]:transition-accordion [&>ul]:duration-200 [&>ul]:overflow-hidden [&>ul]:rounded-b-xl;
-    @apply [&>ul]:max-h-0 [&[aria-expanded="true"]>ul]:max-h-full [&>ul]:-translate-y-full [&[aria-expanded="true"]>ul]:translate-y-0;
+
+    > button {
+      @apply relative z-10 flex items-center justify-between w-full;
+      @apply transition-[border-radius];
+      @apply after:content-[''] after:bg-black after:w-4 after:h-4;
+      @apply after:transition-transform after:duration-200;
+      @apply after:mask-[url("./res/down.svg")] after:mask-default;
+    }
+
+    > ul {
+      @apply bg-stone-200 dark:bg-white dark:text-black;
+      @apply grid auto-rows-fr divide-y divide-stone-700 dark:divide-stone-200;
+      @apply transition-accordion duration-200 overflow-hidden rounded-b-xl;
+      @apply max-h-0 -translate-y-full;
+    }
+
+    &[aria-expanded="true"] {
+      > button {
+        @apply rounded-b-none after:-rotate-180;
+      }
+
+      > ul {
+        @apply max-h-full translate-y-0;
+      }
+    }
+
+    &:hover {
+      > button, ul {
+        @apply bg-stone-200
+      }
+    }
   }
 
   .btn {
