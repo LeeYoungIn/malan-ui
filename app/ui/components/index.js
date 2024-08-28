@@ -1,3 +1,4 @@
+import '@yaireo/tagify/dist/tagify.css'
 import './style.css'
 
 export * from './accordion'
@@ -14,5 +15,6 @@ export * from './progress'
 export * from './radio'
 export * from './switch'
 export * from './tabs'
+export * from './tag'
 export * from './table'
 export * from './toggle'

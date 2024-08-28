@@ -52,7 +52,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [Checkbox](http://localhost:3000/en/component/checkbox)
 - [Collapse](http://localhost:3000/en/component/collapse)
 - [Date Picker](http://localhost:3000/en/component/datepicker)
-  - by [`react-flatpickr`](https://www.npmjs.com/package/react-flatpickr)
+    - with [`react-flatpickr`](https://www.npmjs.com/package/react-flatpickr)
 - [Input](http://localhost:3000/en/component/input)
 - [Loading](http://localhost:3000/en/component/loading)
 - [Menu](http://localhost:3000/en/component/menu)
@@ -63,8 +63,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [Switch](http://localhost:3000/en/component/switch)
 - [Table](http://localhost:3000/en/component/table)
 - [Tabs](http://localhost:3000/en/component/tabs)
+- [Tag](http://localhost:3000/en/component/tag)
+    - with [`Tagify`](https://yaireo.github.io/tagify/)
 - [Toggle](http://localhost:3000/en/component/toggle)
-  - by [`@popperjs/core`](https://www.npmjs.com/package/@popperjs/core), [`react-popper`](https://www.npmjs.com/package/react-popper)
+    - with [`@popperjs/core`](https://www.npmjs.com/package/@popperjs/core), [`react-popper`](https://www.npmjs.com/package/react-popper)
 
 ---
 

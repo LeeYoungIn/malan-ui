@@ -1,0 +1,19 @@
+.input-tag {
+  @apply m-0 p-0 gap-2;
+
+  .tagify__input {
+    @apply m-0;
+  }
+
+  .tagify__tag {
+    @apply m-0;
+
+    > div {
+      @apply rounded-lg before:bg-stone-200 dark:before:bg-white before:shadow-none;
+    }
+  }
+
+  .tagify__tag__removeBtn {
+    @apply text-stone-400 hover:text-white hover:bg-red-800/50;
+  }
+}

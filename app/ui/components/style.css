@@ -5,6 +5,7 @@
 
 @layer components {
   @import "./datepicker.css";
+  @import "./tag.css";
 
   .accordion {
     @apply rounded-xl overflow-hidden;
