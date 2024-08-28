@@ -2,6 +2,7 @@
 import { useCallback, useContext } from 'react'
 import clsx from 'clsx'
 
+import { Link } from '@/navigation'
 import { Button, Switch, SwitchItem } from '@ui/components'
 import ThemeContext, { useTheme } from './themeLayout'
 import { NavContext } from './navbar'
@@ -36,7 +37,7 @@ export default function Header() {
           <i className="ki-outline ki-menu text-xl"></i>
         </Button>
       </div>
-      <div>MALAN</div>
+      <Link href="/">MALAN</Link>
       <div>
         <Switch id="is-dark-theme" name="is-dark-theme" onlyIcon>
           <SwitchItem
