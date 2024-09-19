@@ -11,11 +11,13 @@
     @apply rounded-xl overflow-hidden;
 
     > button {
-      @apply relative z-10 flex items-center justify-between w-full;
-      @apply transition-[border-radius];
-      @apply after:content-[''] after:bg-black after:w-4 after:h-4;
-      @apply after:transition-transform after:duration-200;
-      @apply after:mask-[url("./res/down.svg")] after:mask-default;
+      @apply relative z-10 flex items-center justify-between w-full transition-[border-radius];
+
+      &:after {
+        @apply content-[''] bg-black w-4 h-4;
+        @apply transition-transform duration-200;
+        @apply mask-[url("./res/down.svg")] mask-default;
+      }
     }
 
     > ul {
@@ -48,7 +50,11 @@
 
   .btn-group {
     @apply flex divide-x divide-stone-300 dark:divide-stone-800;
-    @apply [&>div>.btn]:rounded-none [&>div:first-child]:rounded-l-xl [&>div:last-child]:rounded-r-xl [&>div:first-child>.btn]:rounded-l-xl [&>div:last-child>.btn]:rounded-r-xl;
+
+    > div {
+      @apply first:rounded-l-xl last:rounded-r-xl;
+      @apply [&>.btn]:rounded-none [&:first-child>.btn]:rounded-l-xl [&:last-child>.btn]:rounded-r-xl;
+    }
   }
 
   .btn-group,
@@ -57,12 +63,23 @@
   }
 
   .collapse-container {
-    @apply [&>li>label]:flex [&>li>label]:items-center [&>li>label]:justify-between [&>li>label]:cursor-pointer;
-    @apply [&>li>label]:font-semibold [&>li>label]:text-lg [&>li>label+div]:text-stone-600 [&>li>label+div]:dark:text-stone-400;
     @apply divide-y divide-stone-700 dark:divide-stone-300;
-    @apply [&>li>label]:after:content-[''] [&>li>label]:after:bg-black [&>li>label]:after:dark:bg-white [&>li>label]:after:w-4 [&>li>label]:after:h-4;
-    @apply [&>li>label]:after:mask-[url("./res/down.svg")] [&>li>label]:after:mask-default;
-    @apply [&>li>label]:after:transition-transform [&>li>label]:after:duration-200;
+
+    > li {
+      > label {
+        @apply flex items-center justify-between cursor-pointer font-semibold text-lg;
+
+        + div {
+          @apply text-stone-600 dark:text-stone-400;
+        }
+
+        &:after {
+          @apply content-[''] bg-black dark:bg-white w-4 h-4;
+          @apply mask-[url("./res/down.svg")] mask-default;
+          @apply transition-transform duration-200;
+        }
+      }
+    }
   }
 
   input + label {
@@ -85,22 +102,24 @@
   .input-checkbox {
     @apply bg-stone-300 checked:bg-stone-400 dark:bg-stone-600 checked:dark:bg-stone-500 rounded-md;
     @apply mask-[url("./res/tick_square_empty.svg")] checked:mask-[url("./res/tick_square.svg")] mask-default;
-  }
 
-  .input-checkbox:checked {
-    animation: animateCheck 150ms linear;
+    &:checked {
+      animation: animateCheck 150ms linear;
+    }
   }
 
   .input-radio {
     @apply rounded-full;
     @apply border border-stone-300 checked:border-stone-400 dark:border-stone-600 checked:dark:border-stone-500;
     @apply checked:after:bg-stone-400 [&:not(:checked)]:after:dark:bg-transparent checked:after:dark:bg-stone-500;
-    @apply after:content-[''] after:block after:w-2/3 after:h-2/3 after:mx-auto after:mt-[50%] after:origin-center after:rounded-full;
-    @apply after:-translate-y-1/2;
-  }
 
-  .input-radio:checked:after {
-    animation: animateRadio 150ms linear;
+    &:after {
+      @apply content-[''] block w-2/3 h-2/3 mx-auto mt-[50%] origin-center rounded-full -translate-y-1/2;
+    }
+
+    &:checked:after {
+      animation: animateRadio 150ms linear;
+    }
   }
 
   input[type="number"]::-webkit-outer-spin-button,
@@ -109,9 +128,15 @@
   }
 
   .input-group {
-    @apply [&>input]:border-0 [&>input]:flex-1 [&>input]:w-auto [&>input]:rounded-none;
-    @apply [&>span]:px-4 [&>span]:py-3 [&>span]:bg-stone-200 [&>span]:dark:bg-stone-800;
-    @apply [&>span:first-child]:rounded-l-xl [&>span:last-child]:rounded-r-xl;
+    > input {
+      @apply border-0 flex-1 w-auto rounded-none;
+    }
+
+    > span {
+      @apply px-4 py-3 bg-stone-200 dark:bg-stone-800;
+      @apply first:rounded-l-xl last:rounded-r-xl;
+    }
+
     @apply flex items-stretch w-full rounded-xl;
     @apply border border-stone-200 dark:border-stone-800;
   }
@@ -125,54 +150,93 @@
   .popper-dropdown {
     @apply min-w-44 [&_.popper-dropdown-item]:min-w-44;
     @apply pl-4 pr-3 py-2 bg-white dark:bg-stone-950 rounded-xl shadow-xl shadow-stone-100 dark:shadow-none dark:border-2 dark:border-stone-800;
-  }
 
-  .popper-dropdown .popper-dropdown-item {
-    @apply cursor-pointer py-2 text-stone-600/60 hover:text-stone-600 after:bg-stone-600/60 hover:after:bg-stone-600;
-    @apply dark:text-stone-400/50 dark:hover:text-stone-400 dark:after:bg-stone-400/50 dark:hover:after:bg-stone-400;
-    @apply after:w-3.5 after:h-3.5 after:mask-default after:mask-[url("./res/arrow_right.svg")];
+    .popper-dropdown-item {
+      @apply cursor-pointer py-2 text-stone-600/60 hover:text-stone-600 after:bg-stone-600/60 hover:after:bg-stone-600;
+      @apply dark:text-stone-400/50 dark:hover:text-stone-400 dark:after:bg-stone-400/50 dark:hover:after:bg-stone-400;
+      @apply after:w-3.5 after:h-3.5 after:mask-default after:mask-[url("./res/arrow_right.svg")];
+    }
   }
 
   progress {
     @apply w-full h-2 rounded-full;
-  }
 
-  progress::-webkit-progress-bar,
-  progress::-webkit-progress-value {
-    @apply bg-stone-200 dark:bg-stone-700 rounded-full;
-  }
+    &::-webkit-progress-bar,
+    &::-webkit-progress-value {
+      @apply bg-stone-200 dark:bg-stone-700 rounded-full;
+    }
 
-  progress::-webkit-progress-value {
-    @apply bg-stone-400 dark:bg-stone-400;
+    &::-webkit-progress-value {
+      @apply bg-stone-400 dark:bg-stone-400;
+    }
   }
 
   .modal {
-    @apply rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-2 dark:border-stone-800 dark:text-stone-50;
-    @apply [&>.modal-footer]:border-t [&>.modal-footer]:dark:border-t-2 dark:[&>.modal-footer]:border-stone-800;
-    @apply [&>*]:px-6 [&>*]:py-4 [&>.modal-header+.modal-body]:pt-2;
-    @apply [&>.modal-footer]:p-0 [&>.modal-footer>button]:dark:text-stone-50 [&>.modal-footer>button:hover]:bg-stone-100 [&>.modal-footer>button:hover]:dark:bg-stone-800;
-    @apply [&>.modal-footer>button]:rounded-none [&>.modal-footer>button:first-child]:rounded-bl-xl [&>.modal-footer>button:last-child]:rounded-br-xl;
-  }
+    @apply *:px-6 *:py-4 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-2 dark:border-stone-800 dark:text-stone-50;
 
-  .modal .modal-close {
-    @apply mask-default mask-[url("./res/close_square.svg")] bg-black dark:bg-white;
-    @apply w-6 h-6 rounded-none;
+    > .modal-header + .modal-body {
+      @apply pt-2;
+    }
+
+    > .modal-footer {
+      @apply p-0 border-t dark:border-t-2 dark:border-stone-800;
+
+      > button {
+        @apply dark:text-stone-50 hover:bg-stone-100 hover:dark:bg-stone-800;
+        @apply rounded-none first:rounded-bl-xl last:rounded-br-xl;
+      }
+    }
+
+    .modal-close {
+      @apply mask-default mask-[url("./res/close_square.svg")] bg-black dark:bg-white;
+      @apply w-6 h-6 rounded-none;
+    }
   }
 
   .tabs-container {
-    @apply [&>ul]:border-b [&>ul]:border-stone-200 [&>ul]:dark:border-stone-800;
-    @apply [&>ul_.btn]:rounded-b-none;
-    @apply [&.clean>ul_.btn]:border-b-2 [&.clean>ul_.btn]:dark:text-white;
-    @apply [&.clean>ul_.btn]:border-transparent [&.clean>ul_.btn.active]:border-stone-500 [&.clean>ul_.btn.active]:dark:border-stone-400;
+    > ul {
+      @apply border-b border-stone-200 dark:border-stone-800;
+
+      .btn {
+        @apply rounded-b-none;
+      }
+    }
+
+    &.clean {
+      > ul {
+        .btn {
+          @apply border-b-2 dark:text-white border-transparent;
+
+          &.active {
+            @apply border-stone-500 dark:border-stone-400;
+          }
+        }
+      }
+    }
   }
 
   .table {
-    @apply [&_th]:font-medium [&_th]:text-stone-400 [&_th]:dark:text-stone-600 [&_th]:text-sm;
-    @apply [&_th]:px-4 [&_th]:py-3 [&_th]:text-left;
-    @apply [&_td]:px-4 [&_td]:py-3 [&_td]:text-left;
-    @apply [&.table-default_th]:bg-stone-100 [&.table-default_th]:dark:bg-stone-900 [&.table-default_th:first-child]:rounded-l-xl [&.table-default_th:last-child]:rounded-r-xl;
-    @apply [&.table-line_th]:border-b [&.table-line_th]:border-stone-200 [&.table-line_th]:dark:border-stone-800;
-    @apply [&.table-line_td]:border-b [&.table-line_td]:border-stone-200 [&.table-line_td]:dark:border-stone-800;
+    th {
+      @apply px-4 py-3 font-medium text-stone-400 dark:text-stone-600 text-sm text-left;
+    }
+
+    td {
+      @apply px-4 py-3 text-left;
+    }
+
+    &.table-default th {
+      @apply bg-stone-100 dark:bg-stone-900 first:rounded-l-xl last:rounded-r-xl;
+    }
+
+    &.table-line {
+      th {
+        @apply border-b border-stone-200 dark:border-stone-800;
+      }
+
+      td {
+        @apply border-b border-stone-200 dark:border-stone-800;
+      }
+    }
   }
 }
 
