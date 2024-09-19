@@ -1,5 +1,5 @@
-.input-tag {
-  @apply m-0 p-0 gap-2;
+.input-default.input-tag {
+  @apply m-0 px-4 py-[0.5785rem] gap-2;
 
   .tagify__input {
     @apply m-0;
