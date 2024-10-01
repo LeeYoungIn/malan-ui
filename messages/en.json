@@ -13,6 +13,10 @@
       "title": "Button",
       "description": "MALAN UI Button"
     },
+    "card": {
+      "title": "Card",
+      "description": "MALAN UI Card"
+    },
     "checkbox": {
       "title": "Checkbox",
       "description": "MALAN UI Checkbox"

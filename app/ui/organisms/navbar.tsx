@@ -18,6 +18,7 @@ export default function () {
     { url: '/component/accordion', label: 'Accordion' },
     { url: '/component/badge', label: 'Badge' },
     { url: '/component/button', label: 'Button' },
+    { url: '/component/card', label: 'Card' },
     { url: '/component/checkbox', label: 'Checkbox' },
     { url: '/component/collapse', label: 'Collapse' },
     { url: '/component/datepicker', label: 'Date Picker' },
