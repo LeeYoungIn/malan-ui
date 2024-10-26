@@ -2,7 +2,9 @@ import { getTranslations } from 'next-intl/server'
 import { getMetadata } from '@lib/metadata'
 import { Collapse, CollapseItem } from '@ui/components'
 
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata(props: LocaleParams) {
+  const params = await props.params
+  const { locale } = params
   const t = await getTranslations({ locale, namespace: 'metadata.collapse' })
   return getMetadata({
     title: t('title'),

@@ -1,11 +1,12 @@
+@import "./datepicker.css";
+@import "./tag.css";
+
 @config "./tailwind.components.config.ts";
 
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-  @import "./datepicker.css";
-  @import "./tag.css";
 
   .accordion {
     @apply rounded-xl overflow-hidden;

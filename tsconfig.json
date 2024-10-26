@@ -22,11 +22,25 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@lib/*": ["./app/lib/*"],
-      "@ui/*": ["./app/ui/*"]
-    }
+      "@/*": [
+        "./*"
+      ],
+      "@lib/*": [
+        "./app/lib/*"
+      ],
+      "@ui/*": [
+        "./app/ui/*"
+      ]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
