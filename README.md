@@ -47,26 +47,46 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Components
 
 - [Accordion](http://localhost:3000/en/component/accordion)
+  <br/><img src="./readme/accordion_closed.png" width="100" alt="accordion"/>
+  <br/><img src="./readme/accordion_open.png" width="100" alt="accordion"/>
 - [Badge](http://localhost:3000/en/component/badge)
+  <br/><img src="./readme/badge.png" width="200" alt="badge"/>
 - [Button](http://localhost:3000/en/component/button)
+  <br/><img src="./readme/button.png" width="200" alt="button"/>
+- [Card](http://localhost:3000/en/component/card)
+  <br/><img src="./readme/card.png" width="600" alt="card"/>
 - [Checkbox](http://localhost:3000/en/component/checkbox)
+  <br/><img src="./readme/checkbox.png" width="100" alt="checkbox"/>
 - [Collapse](http://localhost:3000/en/component/collapse)
+  <br/><img src="./readme/collapse.png" width="600" alt="collapse"/>
 - [Date Picker](http://localhost:3000/en/component/datepicker)
     - with [`react-flatpickr`](https://www.npmjs.com/package/react-flatpickr)
 - [Input](http://localhost:3000/en/component/input)
+  <br/><img src="./readme/input.png" width="600" alt="input"/>
 - [Loading](http://localhost:3000/en/component/loading)
+  <br/><img src="./readme/loading.png" width="140" alt="loading"/>
 - [Menu](http://localhost:3000/en/component/menu)
+  <br/><img src="./readme/menu.png" width="300" alt="menu"/>
 - [Modal](http://localhost:3000/en/component/modal)
+  <br/><img src="./readme/modal.png" width="200" alt="modal"/>
+  <br/><img src="./readme/modal_ok.png" width="200" alt="modal_ok"/>
+  <br/><img src="./readme/modal_ok_cancel.png" width="200" alt="modal_ok_cancel"/>
 - [Progress](http://localhost:3000/en/component/progress)
+  <br/><img src="./readme/progress.png" width="400" alt="progress"/>
 - [Radio](http://localhost:3000/en/component/radio)
+  <br/><img src="./readme/radio.png" width="150" alt="radio"/>
 - [Switch](http://localhost:3000/en/component/switch)
-- [Switch](http://localhost:3000/en/component/switch)
+  <br/><img src="./readme/switch.png" width="200" alt="switch"/>
 - [Table](http://localhost:3000/en/component/table)
+  <br/><img src="./readme/table.png" width="600" alt="table"/>
 - [Tabs](http://localhost:3000/en/component/tabs)
+  <br/><img src="./readme/tabs.png" width="600" alt="tabs"/>
 - [Tag](http://localhost:3000/en/component/tag)
     - with [`Tagify`](https://yaireo.github.io/tagify/)
+  <br/><img src="./readme/tag.png" width="600" alt="tag"/>
 - [Toggle](http://localhost:3000/en/component/toggle)
     - with [`@popperjs/core`](https://www.npmjs.com/package/@popperjs/core), [`react-popper`](https://www.npmjs.com/package/react-popper)
+  <br/><img src="./readme/toggle.png" width="100" alt="toggle"/>
 
 ---
 
@@ -81,16 +101,13 @@ This project is licensed under the terms of the
 
 - breadcrumb
 - calendar [Fullcalendar](https://fullcalendar.io/docs)
-- card
 - chart
 - drawer
 - editor
 - input [Floating](https://preview.keenthemes.com/html/metronic/docs/base/forms/floating-labels)
-- menu
 - pagination
 - select [Select2](https://select2.org/)
 - skeleton
 - table [Datatable](https://datatables.net/)
-- tag [Tagify](https://yaireo.github.io/tagify/)
 - toast [Toaster](https://github.com/petekeller2/toastr)
 - tooltip
