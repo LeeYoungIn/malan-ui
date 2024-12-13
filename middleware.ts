@@ -28,3 +28,31 @@ export const config = {
     `/((?!${PUBLIC_PAGES.join('|')}).*)`
   ]
 }
+
+// import createMiddleware from 'next-intl/middleware'
+// import { NextResponse } from 'next/server'
+//
+// import { auth } from '@/libs/auth'
+// import { routing } from './i18n/routing'
+//
+// const intlMiddleware = createMiddleware(routing)
+// const publicPaths = ['/signin']
+// const PUBLIC_PATH = RegExp(
+//   `^(/(${routing.locales.join('|')}))?(${publicPaths.join('|')})$`,
+//   'i')
+//
+// export default auth(req => {
+//   if (PUBLIC_PATH.test(req.nextUrl.pathname) || req.auth) return intlMiddleware(req)
+//   else return NextResponse.redirect(new URL(`/signin?callbackUrl=${req.nextUrl.pathname}`, req.url))
+// })
+//
+// export const config = {
+//   matcher: [
+//     '/((?!api|_next/static|_next/image|favicon.ico|images|site.webmanifest|manifest.json).*)',
+//     '/:locale((?!api|_next|static|favicon.ico|images|site.webmanifest|manifest.json).*)',
+//     '/:locale/(public|protected)/:path*'
+//   ],
+//   unstable_allowDynamic: [
+//     '**/node_modules/lodash*/**/*.js'
+//   ]
+// }
